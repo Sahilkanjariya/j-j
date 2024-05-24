@@ -1,0 +1,86 @@
+{% extends 'adminheader.html' %}
+{% load static %}
+{% block content %}
+<!--<form method="post" action="/adminapp/addemp/">-->
+<!--    {% csrf_token %}-->
+<!--    <div>-->
+<!--        <lable>username</lable>-->
+<!--        <input type="text" name="username">-->
+<!--    </div>-->
+<!--    <br>-->
+<!--     <div>-->
+<!--        <lable>firstname</lable>-->
+<!--        <input type="text" name="firstname">-->
+<!--    </div>-->
+<!--    <br>-->
+<!--     <div>-->
+<!--        <lable>lastname</lable>-->
+<!--        <input type="text" name="lastname">-->
+<!--    </div>-->
+<!--    <br>-->
+<!--     <div>-->
+<!--        <lable>email</lable>-->
+<!--        <input type="email" name="email">-->
+<!--    </div>-->
+<!--     <br>-->
+<!--     <div>-->
+<!--        <lable>password</lable>-->
+<!--        <input type="password" name="password">-->
+<!--    </div>-->
+<!--    <br>-->
+
+<!--    <br>-->
+<!--    <button type="submit">submit</button>-->
+<!--</form>-->
+     {% for message in messages %}
+     <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+     <strong>Message:</strong> {{ message }}
+     <button type="button" class="close" data-dismissble="alert" aria-label="close">
+     <span aria-hidden="true">&times;</span>
+     </button>
+     </div>
+     {% endfor %}
+<h4>Register Employee</h4>
+<div class="d-flex justify-content-center">
+<div class="col-xl-12 p-5 mb-xl-10">
+<div class="card card-flush py-4">
+    <div class="card-body">
+        <form method="post" action="/adminapp/addemp/" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-10 fv-row">
+                <label class="required form-label">UserName</label>
+                <input type="text" name="username" class="form-control mb-2" placeholder="User Name" value="" />
+                <div class="text-muted fs-7">A User Name is required and recommended to be unique.</div>
+            </div>
+            <div class="mb-10 fv-row">
+                <label class="required form-label">First Name</label>
+                <input type="text" name="firstname" class="form-control mb-2" placeholder="First Name" value="" />
+                <div class="text-muted fs-7">A First Name is required and recommended to be unique.</div>
+            </div>
+            <div class="mb-10 fv-row">
+                <label class="required form-label">Last Name</label>
+                <input type="text" name="lastname" class="form-control mb-2" placeholder="Second Name" value="" />
+                <div class="text-muted fs-7">A Second Name is required and recommended to be unique.</div>
+            </div>
+            <div class="mb-10 fv-row">
+                <label class="required form-label">Email</label>
+                <input type="text" name="email" class="form-control mb-2" placeholder="Enter Email" value="" />
+                <div class="text-muted fs-7">A Email is required and recommended to be unique.</div>
+            </div>
+            <div class="mb-10 fv-row">
+                <label class="required form-label">Password</label>
+                <input type="password" name="password" class="form-control mb-2" placeholder="Enter Password" value="" />
+                <div class="text-muted fs-7">A Password is required and recommended to be unique.</div>
+            </div>
+
+            <button type="submit" id="kt_ecommerce_add_category_submit" class="btn btn-primary">
+													<span class="indicator-label">Save</span>
+													<span class="indicator-progress">Please wait...
+													<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+												</button>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}

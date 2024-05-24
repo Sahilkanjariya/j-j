@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+     .mmtb{
+    padding: 50px 0px;
+    }
+</style>
+
+    <!--breadcrumb section start-->
+    <div class="breadcrumb-section pt-40 pb-40" data-background="{% static 'images/shapes/breadcrumb-bg.jpg' %}">
+        <div class="container">
+            <p class="breadcrumb-text fw-light mb-0"><a href="index.html">Home</a> / <span class="primary-text-color">Wishlist</span></p>
+        </div>
+    </div>
+    <!--breadcrumb section end-->
+
+
+    <!--wishlist table start-->
+    <div class="ptb-120 mmtb  bg-white">
+        <div class="container">
+            {% for msg in messages %}
+                <div class="alert alert-danger" role="alert">
+                 {{msg}}
+                </div>
+                {% endfor %}
+            <div class="wishlist-table table-responsive">
+                <table class="table">
+                    <tr>
+                        <th class="text-uppercase">Product Name</th>
+                        <th class="text-uppercase">Price</th>
+                        <th class="text-uppercase">Status</th>
+                        <th  class="text-uppercase">Actions</th>
+                    </tr>
+                    {% for i in w %}
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-4 product-box">
+                                <button type="button" class="remove_product"></button>
+                                <div class="feature-image light-bg">
+                                    <img src="{{i.product.image.url}}" class="img-fluid" alt="feature image">
+                                </div>
+                                <div>
+                                    <span class="fs-sm text-uppercase secondary-text-color d-block">{{i.product.cid.name}}</span>
+                                    <a href="#" class="product-title h6 mt-2 d-block">{{i.product.name}}</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>₹{{i.product.price}}.00</td>
+                        <td>
+                            <div >
+                                {% if i.product.pieces != 0 %}
+                                <span>{{i.product.availability}}</span>
+
+                                {% else %}
+                                <span style="color:red">{{i.product.availability}}</span>
+                                {% endif %}
+                            </div>
+                        </td>
+                        <td>
+
+
+                                {% if i.product.pieces != 0 %}
+                             <div>
+                                   <div>
+
+                                 <a href="/addtocart/{{i.product.id}}/" class="template-btn primary-btn text-uppercase fs-sm"><span>Add to Cart</span></a>
+                                   </div>
+                             </div>
+                                {% endif %}
+
+                        </td>
+                    </tr>
+                    {% endfor %}
+<!--                    <tr>-->
+<!--                        <td>-->
+<!--                            <div class="d-flex align-items-center gap-4 product-box">-->
+<!--                                <button type="button" class="remove_product"></button>-->
+<!--                                <div class="feature-image light-bg">-->
+<!--                                    <img src="{% static 'images/products/product-2.png' %}" class="img-fluid" alt="feature image">-->
+<!--                                </div>-->
+<!--                                <div>-->
+<!--                                    <span class="fs-sm text-uppercase secondary-text-color d-block">Earrings</span>-->
+<!--                                    <a href="#" class="product-title h6 mt-2 d-block">Blue Cool Earring</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </td>-->
+<!--                        <td>₹250.55</td>-->
+<!--                        <td>-->
+<!--                            <div class="stock-status d-flex align-items-center justify-content-between">-->
+<!--                                <span>In stock</span>-->
+<!--                                <button type="button" class="template-btn primary-btn text-uppercase fs-sm"><span>Add to Cart</span></button>-->
+<!--                            </div>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>-->
+<!--                            <div class="d-flex align-items-center gap-4 product-box">-->
+<!--                                <button type="button" class="remove_product"></button>-->
+<!--                                <div class="feature-image light-bg">-->
+<!--                                    <img src="{% static 'images/products/product-3.png' %}" class="img-fluid" alt="feature image">-->
+<!--                                </div>-->
+<!--                                <div>-->
+<!--                                    <span class="fs-sm text-uppercase secondary-text-color d-block">Plated</span>-->
+<!--                                    <a href="#" class="product-title h6 mt-2 d-block">Amazing Gold Plated</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </td>-->
+<!--                        <td>₹150.55</td>-->
+<!--                        <td>-->
+<!--                            <div class="stock-status d-flex align-items-center justify-content-between">-->
+<!--                                <span>In stock</span>-->
+<!--                                <button type="button" class="template-btn primary-btn text-uppercase fs-sm"><span>Add to Cart</span></button>-->
+<!--                            </div>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--wishlist table end-->
+
+
+    <!--newsletter section start-->
+    <section class="newsletter-section light-bg ptb-120 mmtb  position-relative z-1">
+        <img src="{% static 'images/shapes/neaklace.png' %}" alt="neaklace" class="position-absolute end-0 top-0 z--1 d-none d-xxl-block">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="newsletter-box text-center">
+                        <span class="fs-sm fw-light secondary-text-color">GET OUR NEWSLETTER</span>
+                        <h2 class="fw-normal mt-4 mb-50">Get News & Update to Your Inbox</h2>
+                        <form class="newsletter-form d-flex align-items-center">
+                            <input type="email" placeholder=" Email address...">
+                            <button type="submit" class="template-btn primary-btn"><span>Subscribe</span></button>
+                        </form>
+                        <p class="mb-0 mt-32 fw-light">Will be used accordance with our <a href="#" class="text-decoration-underline primary-text-color hover-secondary">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--newsletter section end-->
+
+   {% endblock %}

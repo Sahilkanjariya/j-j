@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!--breadcrumb section start-->
+    <div class="breadcrumb-section pt-40 pb-40" data-background="{% static 'images/shapes/breadcrumb-bg.jpg' %}">
+        <div class="container">
+            <p class="breadcrumb-text fw-light mb-0"><a href="index.html">Home</a>/<span class="primary-text-color">Shop List Layout</span></p>
+        </div>
+    </div>
+    <!--breadcrumb section end-->
+
+    <!--shop section start-->
+    <section class="shop-section bg-white ptb-120 overflow-hidden">
+        <div class="container">
+            <div class="row g-5 g-xl-4">
+                <div class="col-xl-3 order-2 order-xl-1">
+                    <div class="shop-sidebar">
+<!--                        <div class="sidebar-widget search-widget">-->
+<!--                            <form>-->
+<!--                                <input type="text" placeholder="Search Here..." class="theme-input fw-light">-->
+<!--                            </form>-->
+<!--                        </div>-->
+                        <div class="sidebar-widget categories-widget mt-60">
+                            <h4 class="widget-title position-relative fw-normal mb-5">Categories</h4>
+                            <ul class="sidebar-check-fields">
+                                {% for i in cat %}
+                                <li><label><a href="/shop-list/?cid={{i.id}}" style="color:black;">{{i.name}}</a></label></li>
+                                {% endfor %}
+
+                            </ul>
+                        </div>
+                        <div class="sidebar-widget filter-widget mt-60">
+                            <h4 class="widget-title position-relative mb-5">Filter by price</h4>
+                            <div class="ur-pricing-range"></div>
+                            
+                            <form action="#" class="d-flex align-items-center justify-content-between mt-4">
+                                <p class="mb-0">
+                                    <label for="amount">Price:</label>
+                                    <input type="text" id="amount" readonly>
+                                </p>
+                                <button type="submit" class="submit-btn">Filter<span class="ms-2"><i class="fa fa-arrow-right"></i></span></button>
+                            </form>
+                        </div>
+
+<!--                        <div class="sidebar-widget products-widget mt-60">-->
+<!--                            <h4 class="widget-title position-relative mb-5">Latest products</h4>-->
+<!--                            <ul class="sidebar-products">-->
+<!--                                <li class="d-flex align-items-center gap-4">-->
+<!--                                    <div class="flex-shrink-0 thumbnail light-bg p-2">-->
+<!--                                        <a href="product-details.html"><img src="{% static 'images/products/product-1.png' %}" alt="thumbnail" class="img-fluid"></a>-->
+<!--                                    </div>-->
+<!--                                    <div>-->
+<!--                                        <a href="product-details.html"><h6 class="mb-3">Pure Shine Gold</h6></a>-->
+<!--                                        <span class="price primary-text-color">₹165.00</span>-->
+<!--                                    </div>-->
+<!--                                </li>-->
+<!--                                <li class="d-flex align-items-center gap-4">-->
+<!--                                    <div class="flex-shrink-0 thumbnail light-bg p-2">-->
+<!--                                        <a href="product-details.html"><img src="{% static 'images/products/product-2.png' %}" alt="thumbnail" class="img-fluid"></a>-->
+<!--                                    </div>-->
+<!--                                    <div>-->
+<!--                                        <a href="product-details.html"><h6 class="mb-3">Delight Hiy Ring</h6></a>-->
+<!--                                        <span class="price primary-text-color">₹125.00</span>-->
+<!--                                    </div>-->
+<!--                                </li>-->
+<!--                                <li class="d-flex align-items-center gap-4">-->
+<!--                                    <div class="flex-shrink-0 thumbnail light-bg p-2">-->
+<!--                                        <a href="product-details.html"><img src="{% static 'images/products/product-3.png' %}" alt="thumbnail" class="img-fluid"></a>-->
+<!--                                    </div>-->
+<!--                                    <div>-->
+<!--                                        <a href="product-details.html"><h6 class="mb-3">White Ball Gold</h6></a>-->
+<!--                                        <span class="price primary-text-color">₹150.00</span>-->
+<!--                                    </div>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+                <div class="col-xl-9 order-1 order-xl-2">
+                    <div class="shop-grid ps-4">
+                        <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap mb-40">
+<!--                            <p class="mb-0 fw-light">Showing 1-12 of 88 results</p>-->
+                            <div class="d-flex align-items-center gap-4">
+<!--                                <div class="select-wrapper">-->
+<!--                                    <select class="nice_select">-->
+<!--                                        <option>Default Sorting</option>-->
+<!--                                        <option>Sort by Price</option>-->
+<!--                                        <option>Sort by Popularity</option>-->
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                                <div class="layout-grid d-flex align-items-center">-->
+<!--&lt;!&ndash;                                    <a href="shop.html">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <rect x="10.7139" width="9" height="3" fill="#121111"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <rect x="10.7139" y="7" width="9" height="3" fill="#121111"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <rect x="10.7139" y="14" width="9" height="3" fill="#121111"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <rect width="9" height="3" fill="#121111"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <rect y="7" width="9" height="3" fill="#121111"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <rect y="14" width="9" height="3" fill="#121111"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </svg>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </a>&ndash;&gt;-->
+<!--                                    <a href="shop-list.html" class="active">-->
+<!--                                        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                                            <rect x="5.71387" width="14.2857" height="3" fill="#121111"/>-->
+<!--                                            <rect x="5.71387" y="7" width="14.2857" height="3" fill="#121111"/>-->
+<!--                                            <rect x="5.71387" y="14" width="14.2857" height="3" fill="#121111"/>-->
+<!--                                            <rect width="3.80952" height="3" fill="#121111"/>-->
+<!--                                            <rect y="7" width="3.80952" height="3" fill="#121111"/>-->
+<!--                                            <rect y="14" width="3.80952" height="3" fill="#121111"/>-->
+<!--                                        </svg>-->
+<!--                                    </a>-->
+<!--                                </div>-->
+                            </div>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="coupon-banner mb-32" data-background="{% static 'images/banner/coupon-banner.jpg' %}">
+                                    <h3 class="mb-2">Summer Super Sale</h3>
+                                    <p class="mb-32">30% off. Use this code: SAS2023</p>
+                                    <a href="#" class="template-btn white-btn">Shop Now</a>
+                                </div>
+                            </div>
+                            {% for i in p %}
+                            <div class="col-xxl-12 col-lg-6">
+                                <div class="horizontal-product-card mb-32">
+                                    <div class="feature-image light-bg p-4 d-inline-flex align-items-center justify-content-center">
+                                        <a href="/product-details/"><img src="{{i.image1.url}}" alt="product" class="img-fluid"></a>
+                                    </div>
+                                    <div>
+                                        <a href="/shop-list/" class="category-btn">{{i.cid.name}}</a>
+                                        <a href="/product-details/" class="product-title"><h5 class="mb-2">{{i.name}}</h5></a>
+                                        <div class="pricing d-flex align-items-center gap-2">
+                                            <span class="primary-text-color current-price">₹{{i.price}}.00</span>
+<!--                                            <span class="primary-text-color sale-price">₹350.00</span>-->
+                                        </div>
+                                        <p class="mt-4 mb-40 fw-light">{{i.description}}</p>
+                                        <div class="d-flex align-items-center gap-3 flex-wrap">
+                                            <div class="quantity-box">
+                                                <button type="button" class="drecrement"></button>
+                                                <input type="number" value="1" min="1">
+                                                <button type="button" class="drecrement"></button>
+                                            </div>
+                                            <button type="submit" href="/addtocart/{{i.id}}/" class="add_to_cart_btn">Add to Cart<span class="ms-2"><i class="bi bi-basket"></i></span></button>
+                                            <div>
+                                            <button  href="/add_to_wishlist/{{i.id}}/" type="submit" class="action_btn wish-btn"><i class="fa fa-heart"></i></button>
+                                            <button  href="/product-details/{{i.id}}/" type="submit" class="action_btn wish-btn"><i class="fa fa-eye"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--shop section end-->
+
+    <!--newsletter section start-->
+<!--    <section class="newsletter-section light-bg ptb-120 position-relative z-1">-->
+<!--        <img src="{% static 'images/shapes/neaklace.png' %}" alt="neaklace" class="position-absolute end-0 top-0 z&#45;&#45;1 d-none d-xxl-block">-->
+<!--        <div class="container">-->
+<!--            <div class="row justify-content-center">-->
+<!--                <div class="col-xl-6">-->
+<!--                    <div class="newsletter-box text-center">-->
+<!--                        <span class="fs-sm fw-light secondary-text-color">GET OUR NEWSLETTER</span>-->
+<!--                        <h2 class="fw-normal mt-4 mb-50">Get News & Update to Your Inbox</h2>-->
+<!--                        <form class="newsletter-form d-flex align-items-center">-->
+<!--                            <input type="email" placeholder=" Email address...">-->
+<!--                            <button type="submit" class="template-btn primary-btn"><span>Subscribes</span></button>-->
+<!--                        </form>-->
+<!--                        <p class="mb-0 mt-32 fw-light">Will be used accordance with our <a href="#" class="text-decoration-underline primary-text-color hover-secondary">Privacy Policy</a></p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+    <!--newsletter section end-->
+
+    {% endblock %}

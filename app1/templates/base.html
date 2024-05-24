@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from html.matethemes.com/uroan/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Jan 2024 09:28:41 GMT -->
+<head>
+      {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEMS & JEWELLERY </title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!--Essential css files-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fancybox.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!--favicon-->
+    <link rel="icon" href="{% static 'images/favicon-icon.png' %}">
+
+</head>
+<body>
+
+    <!--preloader start-->
+    <div class="preloader">
+        <h1 class="display-1">JEMS & JEWELLERY </h1>
+        <div class="preload-progress">
+            <span></span>
+        </div>
+    </div>
+    <!--preloader end-->
+
+<!--    &lt;!&ndash;header section start&ndash;&gt;-->
+<!--    <header class="ur_header_section primary-bg-color header-sticky">-->
+<!--        <div class="topbar py-2 bottom-border d-none d-lg-block">-->
+<!--            <div class="container-large">-->
+<!--                <div class="row align-items-center">-->
+<!--                    <div class="col-xl-7 col-lg-8">-->
+<!--                        <div class="topbar-info d-flex align-items-center gap-48 flex-wrap">-->
+<!--                            <span class="text-white item-single"><a href="tel:+917778807747" class="text-white">+917778807747</a> (9AM - 6PM IST)</span>-->
+<!--                            <span class="text-white item-single">FREE SHIPPING ON ORDERS ABOVE Rs.1000</span>-->
+<!--                            <span class="text-white item-single">GIFT CARDS</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                   <div class="col-xl-5 col-lg-4">-->
+<!--                        <div class="d-flex align-items-center justify-content-end gap-48 topbar-info flex-wrap">-->
+<!--&lt;!&ndash;                            <div class="ur-header-select item-single">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <select>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <option>EN</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <option>BN</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <option>CN</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </select>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="ur-header-select item-single">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <select>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <option>USD</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <option>BDT</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <option>CNY</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <option>INR</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </select>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--                            <a href="/shop/" class="item-single text-uppercase">store</a>-->
+<!--                            <a href="#" class="item-single text-uppercase">Subscribe</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="header-wrapper">-->
+<!--            <div class="container-large">-->
+<!--                <div class="row align-items-center">-->
+<!--                    <div class="col-xl-2 col-6">-->
+<!--                        <a href="index.html" class="logo-white"><img src="{% static 'images/logo.jpg' %}" alt="logo" class="img-fluid" height="100px" width="90px"></a>-->
+<!--                    </div>-->
+<!--                    <div class="col-xxl-7 col-xl-8 d-none d-xl-block">-->
+<!--                        <nav class="ur-navmenu">-->
+<!--                            <ul>-->
+<!--                                <li class="has-submenu">-->
+<!--                                    <a href="javascript:void(0)">Home</a>-->
+<!--                                    <ul class="submenu-wrapper">-->
+<!--                                        <li><a href="/">Home Page 1</a></li>-->
+<!--                                        <li><a href="/index2/">Home Page 2</a></li>-->
+<!--                                        <li><a href="/index3/">Home Page 3</a></li>-->
+<!--                                    </ul>-->
+<!--                                </li>-->
+<!--                                <li><a href="/about/">About</a></li>-->
+<!--                                <li class="has-submenu"><a href="javascript:void(0)">Pages</a>-->
+
+<!--                                    <div class="ur-megamenu">-->
+<!--                                        <div class="megamenu-row">-->
+<!--                                            <div class="megamenu-column border-r">-->
+<!--                                                <h6 class="column-title">Product Pages</h6>-->
+<!--                                                <ul class="pages-list">-->
+<!--                                                    <li><a href="/shop/">Shop Page</a></li>-->
+<!--                                                    <li><a href="/shop-list/">Shop List</a></li>-->
+<!--                                                    <li><a href="/product-details/">Product Details</a></li>-->
+<!--                                                    <li><a href="#">Shop Layout 04</a></li>-->
+<!--                                                </ul>-->
+<!--                                            </div>-->
+<!--                                            <div class="megamenu-column border-r">-->
+<!--                                                <h6 class="column-title">Filter Layout</h6>-->
+<!--                                                <ul class="pages-list">-->
+<!--                                                    <li><a href="/shop-list/">Filter Sidebar</a></li>-->
+<!--                                                    <li><a href="#">Filter On Top</a></li>-->
+<!--                                                    <li><a href="/shop/">Filter Side Out</a></li>-->
+<!--                                                    <li><a href="/product-details/">Modal Filter</a></li>-->
+<!--                                                </ul>-->
+<!--                                            </div>-->
+<!--                                            <div class="megamenu-column border-r">-->
+<!--                                                <h6 class="column-title">Product Type</h6>-->
+<!--                                                <ul class="pages-list">-->
+<!--                                                    <li><a href="/shop-list/">Filter Sidebar</a></li>-->
+<!--                                                    <li><a href="#">Filter On Top</a></li>-->
+<!--                                                    <li><a href="/shop/">Filter Side Out</a></li>-->
+<!--                                                    <li><a href="/product-details/">Modal Filter</a></li>-->
+<!--                                                </ul>-->
+<!--                                            </div>-->
+<!--                                            <div class="megamenu-column">-->
+<!--                                                <h6 class="column-title">Shop Pages</h6>-->
+<!--                                                <ul class="pages-list">-->
+<!--                                                    <li><a href="/login/">My Account</a></li>-->
+<!--                                                    <li><a href="/cart/">Cart</a></li>-->
+<!--                                                    <li><a href="/checkout/">Checkout</a></li>-->
+<!--                                                    <li><a href="/wishlist/">Wishlist</a></li>-->
+<!--                                                    <li><a href="/order-tracking/">Order Tracking</a></li>-->
+<!--                                                </ul>-->
+<!--                                            </div>-->
+<!--                                            <div class="megamenu-column banner">-->
+<!--                                                <div class="megamenu-banner">-->
+<!--                                                    <a href="/product-details/" class="p-0"><img src="{% static 'images/banner/banner-1.jpg' %}" alt="not found" class="img-fluid"></a>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </li>-->
+<!--                                <li class="has-submenu"><a href="javascript:void(0)">Shop</a>-->
+<!--                                    <ul class="submenu-wrapper">-->
+<!--                                        <li><a href="/shop/">Shop Grid</a></li>-->
+<!--                                        <li><a href="/shop-list/">Shop List</a></li>-->
+<!--                                        <li><a href="/product-details/">Product Details</a></li>-->
+<!--                                        <li><a href="/product-details2/">Product Details V2</a></li>-->
+<!--                                        <li><a href="/product-details3">Product Details V3</a></li>-->
+<!--                                    </ul>-->
+<!--                                </li>-->
+<!--                                <li><a href="/wishlist/">Wishlist</a></li>-->
+<!--                                <li><a href="/contact/">Contact</a></li>-->
+<!--                            </ul>-->
+<!--                        </nav>-->
+<!--                    </div>-->
+<!--                    <div class="col-xxl-3 col-xl-2 col-6">-->
+<!--                        <div class="ur-header-right d-flex align-items-center justify-content-end">-->
+<!--                            <div class="ur-user-links position-relative">-->
+<!--                                <button type="button" class="user-btn">-->
+<!--                                    <i class='fa fa-user'></i>-->
+<!--                                </button>-->
+<!--                                <ul class="position-absolute user-menu">-->
+<!--                                    <li><a href="/login/">Login</a></li>-->
+<!--                                    <li><a href="/signup/">Sign Up</a></li>-->
+<!--                                    <li><a href="/login/">My Account</a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                            <div class="user-cart d-none d-sm-block">-->
+<!--                                <button type="button" class="cart-btn" data-bs-toggle="dropdown">-->
+<!--                                    <span class="me-2">-->
+<!--                                        <i class='fa-solid fa-bag-shopping'></i>-->
+<!--                                    </span>-->
+<!--                                    <span class="btn-text">Cart (Rs.0.00)</span>-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                            <div class="d-sm-none">-->
+<!--                                <a href="/cart/" class="header-link"><i class="fa-solid fa-basket-shopping"></i></a>-->
+<!--                            </div>-->
+<!--                            <div class="header-search d-none d-sm-block">-->
+<!--                                <div class="dropdown">-->
+<!--                                    <button class="search-btn" data-bs-toggle="dropdown"><i class="fa-solid fa-magnifying-glass"></i></button>-->
+<!--                                    <div class="dropdown-menu dropdown-menu-end">-->
+<!--                                        <form class="search-form d-flex align-items-center gap-2">-->
+<!--                                            <input type="text" placeholder="Search..." class="theme-input bg-transparent">-->
+<!--                                            <button type="submit" class="submit-btn">Go</button>-->
+<!--                                        </form>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="d-sm-none">-->
+<!--                                <a href="javascript:void(0)" class="header-link header-search-open"><i class="fa-solid fa-magnifying-glass"></i></a>-->
+<!--                            </div>-->
+<!--                            <div class="header-toggle">-->
+<!--                                <button type="button" class="ur3-header-toggle offcanvus-toggle d-none d-xl-inline-block">-->
+<!--                                    <span></span>-->
+<!--                                    <span></span>-->
+<!--                                    <span></span>-->
+<!--                                </button>-->
+<!--                                <button type="button" class="ur3-header-toggle mobile-menu-toggle d-xl-none">-->
+<!--                                    <span></span>-->
+<!--                                    <span></span>-->
+<!--                                    <span></span>-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </header>-->
+<!--    &lt;!&ndash;header section end&ndash;&gt;-->
+
+<!--    header Start -->
+    <style>
+        // ****************************//
+//  Header Component scss starts //
+// ****************************//
+.header-content-icon {
+  i {
+    color: var(--bs-white);
+    font-size: 12px;
+    background: #1e227a;
+    border-radius: 100%;
+    display: inline-flex;
+    padding: 4px;
+  }
+}
+.btn-color {
+  background-color: var(--bs-theme-color);
+  color: var(--bs-white);
+  width: 90px;
+}
+.btn-font-color {
+  color: var(--bs-white);
+}
+.header-bottom {
+  .navbar {
+    padding: 0;
+  }
+}
+.btn-color {
+  a.nav-link {
+    color: var(--bs-white);
+  }
+}
+header {
+  position: fixed;
+  padding: 0;
+  box-shadow: 0 4px 12px -9px var(--bs-shadow-color);
+  top: 0;
+  z-index: 99;
+  background: var(--bs-white);
+  width: 100%;
+}
+.header-top {
+  background-color: #333;
+  padding: 20px;
+  padding: 10px;
+  float: right;
+  width: 80%;
+  color: white;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 3% 99%);
+  font-size: 12px;
+  justify-content: space-evenly;
+  display: flex;
+}
+.header-bottom {
+  float: left;
+  width: 100%;
+}
+.navbar-brand {
+  padding-top: var(--bs-navbar-brand-padding-y);
+  padding-bottom: var(--bs-navbar-brand-padding-y);
+  margin-right: var(--bs-navbar-brand-margin-end);
+  font-size: var(--bs-navbar-brand-font-size);
+  color: var(--bs-navbar-brand-color);
+  text-decoration: none;
+  white-space: nowrap;
+  margin-top: -50px;
+  margin-top: -41px;
+  margin-left:-40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+    font-weight: 600;
+    font-family: var(--heading-font);
+    text-align: center;
+}
+.header-bottom {
+  .navbar {
+    ul {
+      li {
+        padding: 5px 10px;
+      }
+    }
+  }
+}
+.header-content {
+  display: initial;
+  padding: 0px 15px 0px 0px;
+}
+.header-content-contact {
+  justify-content: end;
+  display: flex;
+  margin-bottom: -12px;
+}
+
+.main-ul {
+    justify-content: end !important;
+    right: 0px;
+    position: fixed;
+}
+  .navbar-link {
+    padding: 0px 10px;
+  }
+  .nav-icon-main {
+    margin-left: 80px;
+  }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: max-content;
+    min-width: 100%;
+    right: 0px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.icons{
+font-size: x-large;
+}
+
+        @media (max-width: 1250px) {
+        .logo {
+    margin-left: 40px;
+    margin-top: 45px;
+}
+.header-top {
+     width: 100%;
+    color: white;
+    clip-path: none;
+}
+        }
+
+
+        .search-box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+<!--  background: white;-->
+}
+::placeholder {
+  color: #fff !important;
+}
+::-ms-input-placeholder { /* Edge 12 -18 */
+  color: #fff !important;
+}
+
+.input-search{
+  height: 50px;
+  border-style: none;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  padding-right: 40px;
+  background: transparent;
+  color:#fff;
+}
+
+.input-search::placeholder{
+  color:rgba(255,255,255,.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search{
+  width: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  pointer-events: painted;
+  color:white;
+}
+.btn-search:focus ~ .input-search{
+  width: 300px;
+  border-radius: 0px;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+       .dropdown-link:hover {
+    color: #f9b685;
+    text-decoration:underline;
+}
+
+        li.user-profile {
+    margin-top: -7px;
+}
+    </style>
+
+
+
+<!--    Start Code To Header-->
+
+
+<header>
+  <div class="header-top">
+    <div class="container header-content-contact row">
+         <div class="search-box">
+             <form method="get"action="/search/" >
+<!--                 <button type="button" class="btn-search"></button>-->
+<!--                 <input type="text" name="search" class="input-search" placeholder="Type to Search...">-->
+                 <button type="button"></button>
+                 <input type="text" name="search" autocomplete="off" class="input-search" placeholder="Type to Search...">
+<!--                 <button type="button"></button>-->
+
+             </form>
+
+
+  </div>
+      <div class="row header-content-icon col-md-2">
+        <div class="col-4">
+            <a class="nav-link" href="/wishlist/">
+          <i class="bi bi-heart icons"></i>
+            </a>
+        </div>
+        <div class="col-4">
+            <a class="nav-link" href="/cart/">
+          <i class="bi bi-cart icons"></i>
+            </a>
+        </div>
+        <div class="col-4">
+            <a class="nav-link" href="/vendorapp/">
+          <i class="bi bi-shop icons"></i>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+          <a class="navbar-brand" href="#"><h3 class="logo">JEMS & <br>JEWELLERY</h3></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobilemenu"
+            aria-controls="mobilemenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse main-ul" id="mobilemenu">
+            <ul class="navbar-nav">
+              <li>
+                <a class='nav-link' href="/">
+                  <i class="bi bi-house-door-fill"></i>
+                </a>
+              </li>
+                {% for i in cat %}
+                    <li>
+                      <span class="dropdown nav-link">
+                                <span>{{i.name}}</span>
+
+
+                             <span class="dropdown-content">
+                                 {% for val in i.subcategory_set.all %}
+                                 <a href="/shop/?sid={{val.id}}" class='nav-link dropdown-link'>{{val.name}}</a>
+                                 {% endfor %}
+                             </span>
+
+                      </span>
+                    </li>
+                {% endfor %}
+
+<!--                <li class="user-profile">-->
+                    <span class="dropdown nav-link">
+                  <span><i class="bi bi-person icons"></i></span>
+  <span class="dropdown-content">
+      {% if user.is_authenticated %}
+    <a  class='nav-link dropdown-link'>Hello ,{{user.username}}</a>
+    <a  href="/logout/" class='nav-link dropdown-link'>Sign Out</a>
+    <a  href="/order/" class='nav-link dropdown-link'>Order</a>
+      {% else %}
+    <a href="/login/" class='nav-link dropdown-link'>Sign In</a>
+    <a href="/signup/" class='nav-link dropdown-link'>Sign up</a>
+      {% endif %}
+  </span>
+</span>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<!--    header End -->
+
+
+    <!--offcanvus start-->
+    <div class="offcanvus-box position-fixed bg-white">
+        <a href="javascript:void(0)" class="offcanvus-close"><i class="fa-solid fa-xmark"></i></a>
+        <div class="content-top mb-100">
+            <a href="/index/" class="offcanvus-logo"><img src="{% static 'images/logo.jpg' %}" alt="logo" height="100px" width="90px"></a>
+            <p class="mb-0 mt-32 fw-light">Ghuma-Bopal road,Ahemdabad,sahilnishakunjal334@gmail.com (+917778807747)</p>
+        </div>
+        <div class="offcanvus-gallery d-flex align-items-center flex-wrap">
+            <a href="#"><img src="{% static 'images/gallery/1.jpg' %}" alt="not found"></a>
+            <a href="#"><img src="{% static 'images/gallery/2.jpg' %}" alt="not found"></a>
+            <a href="#"><img src="{% static 'images/gallery/3.jpg' %}" alt="not found"></a>
+            <a href="#"><img src="{% static 'images/gallery/4.jpg' %}" alt="not found"></a>
+            <a href="#"><img src="{% static 'images/gallery/5.jpg' %}" alt="not found"></a>
+            <a href="#"><img src="{% static 'images/gallery/6.jpg' %}" alt="not found"></a>
+        </div>
+        <div class="offcanvus-newsletter">
+            <h4 class="mb-4 text-center">Newsletter</h4>
+            <form action="#">
+                <input type="email" placeholder="Enter your e-mail" class="theme-input">
+                <button type="submit" class="template-btn primary-btn mt-3 w-100"><span>SUBSCRIBE NOW</span></button>
+            </form>
+        </div>
+        <div class="offcanvus-bottom d-flex align-items-center justify-content-between">
+            <div class="language-switcher">
+                <div class="dropdown">
+                    <button type="button" data-bs-toggle="dropdown"><img src="{% static 'images/icons/flag-usa.png' %}" alt="flag">English <span><i class="fas fa-angle-down"></i></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><img src="{% static 'images/icons/flag-bd.jpg' %}" alt="flag">Bangla</a></li>
+                        <li><a href="#"><img src="{% static 'images/icons/flag-india.jpg' %}" alt="flag">Hindi</a></li>
+                    </ul>
+                </div>
+            </div>
+<!--            <div class="currency-switcher">-->
+<!--                <select>-->
+<!--                    <option>USD</option>-->
+<!--                    <option>BDT</option>-->
+<!--                    <option>CNY</option>-->
+<!--                </select>-->
+            </div>
+            <div class="user-links">
+                <a href="/login/"><span class="me-2"><i class="fa-regular fa-user"></i></span>Account</a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvus end-->
+
+    <!--mobile menu start-->
+    <div class="mobile-menu">
+        <a href="javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+        <a href="#" class="logo"><img src="{% static 'images/logo-black.jpg' %}" alt="logo" class="img-fluid" height="100px" width="90px"></a>
+        <ul class="mobile-nav-menu">
+            <li class="has-submenu">
+                <a href="javascript:void(0)">Home</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="/index/">Home Page 1</a></li>
+                    <li><a href="/index2/">Home Page 2</a></li>
+                    <li><a href="index3/">Home Page 3</a></li>
+                </ul>
+            </li>
+            <li><a href="about/">About</a></li>
+            <li class="has-submenu"><a href="javascript:void(0)">Pages</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="/cart/">Cart</a></li>
+                    <li><a href="/checkout/">Checkout</a></li>
+                    <li><a href="/faq/">Faq</a></li>
+                    <li><a href="/wishlist/">Wishlist</a></li>
+                    <li><a href="/order-tracking/">Order Tracking</a></li>
+                </ul>
+
+            </li>
+            <li class="has-submenu"><a href="javascript:void(0)">Blog</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="/blog/">Blog List</a></li>
+                    <li><a href="/blog-single/">Blog Details</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu"><a href="javascript:void(0)">Shop</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="/shop/">Shop Grid</a></li>
+                    <li><a href="/shop-list/">Shop List</a></li>
+                    <li><a href="/product-details/">Product Details</a></li>
+                    <li><a href="/product-details2/">Product Details V2</a></li>
+                    <li><a href="/product-details3/">Product Details V3</a></li>
+                </ul>
+            </li>
+            <li><a href="/wishlist/">Wishlist</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <form class="mobile-search d-flex align-items-center mt-5" action="#">
+            <input type="text" placeholder="Search..." class="theme-input">
+            <button type="submit" class="template-btn primary-btn"><span>Go</span></button>
+        </form>
+    </div>
+    <!--mobile menu end-->
+
+    <!--search form start-->
+    <div class="ur-search-form">
+        <a href="#" class="close"><i class="fas fa-xmark"></i></a>
+        <form action="#" class="d-flex align-items-center">
+            <input type="text" placeholder="Search...." class="theme-input">
+            <button type="submit" class="submit-btn">Go</button>
+        </form>
+    </div>
+    <!--search form end-->
+
+    <!--cart drawer start-->
+    <div class="cart-drawer position-fixed">
+        <div class="drawer-close d-flex align-items-center justify-content-between position-absolute start-0 top-0 w-100 px-4 py-4 border-bottom">
+            <h6 class="mb-0">Shopping Cart</h6>
+            <a href="javascript:void(0)" class="drawer-close"><i class="fas fa-xmark"></i></a>
+        </div>
+        <ul class="cart-list">
+            <li class="d-flex align-items-center gap-3">
+                <div class="feature-image light-bg">
+                    <a href="/product-details/"><img src="{% static 'images/products/product-1.png' %}" alt="feature image" class="img-fluid"></a>
+                </div>
+                <div class="d-flex justify-content-between gap-3 w-100">
+                    <div>
+                        <a href="/product-details/"><h6 class="mb-1">Weeding Rings</h6></a>
+                        <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">$250.00</span>
+                        <div class="quantity d-flex align-items-center">
+                            <input type="text" value="1">
+                            <div class="step-btns">
+                                <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                                <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="d-flex align-items-center gap-4">
+                <div class="feature-image light-bg">
+                    <a href="/product-details/"><img src="{% static 'images/products/product-2.png' %}" alt="feature image" class="img-fluid"></a>
+                </div>
+                <div class="d-flex justify-content-between gap-3 w-100">
+                    <div>
+                        <a href="/product-details/"><h6 class="mb-1">Diamond Rings</h6></a>
+                        <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">Rs.1000</span>
+                        <div class="quantity d-flex align-items-center">
+                            <input type="text" value="1">
+                            <div class="step-btns">
+                                <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                                <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="d-flex align-items-center gap-4">
+                <div class="feature-image light-bg">
+                    <a href="/product-details/"><img src="{% static 'images/products/product-3.png' %}" alt="feature image" class="img-fluid"></a>
+                </div>
+                <div class="d-flex justify-content-between gap-3 w-100">
+                    <div>
+                        <a href="/product-details/"><h6 class="mb-1">Bracelets Gold</h6></a>
+                        <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">$250.00</span>
+                        <div class="quantity d-flex align-items-center">
+                            <input type="text" value="1">
+                            <div class="step-btns">
+                                <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                                <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="close"><i class="fas fa-xmark"></i></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="drawer-bottom border-top">
+            <div class="d-flex align-items-center justify-content-between mt-4">
+                <h6 class="mb-0">Total:</h6>
+                <span class="fw-medium secondary-text-color">Rs.2500.00</span>
+            </div>
+            <a href="/cart/" class="template-btn primary-btn text-uppercase fw-medium w-100 text-center mt-4"><span>View Cart & Check Out</span></a>
+        </div>
+    </div>
+
+    <!--cart drawer end-->
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!--footer section start-->
+    <footer class="footer-style-3 primary-bg-color pt-120 pb-3 pb-xl-0">
+        <div class="container-large">
+           <a class="navbar-brand pb-3" href="#"><h3 class="logo" style="color:white">JEMS & <br>JEWELLERY</h3></a>
+            <p class="mb-0 pb-2 text-white text-center">© 2024 JEMS & JEWELLERY. All Rights Reserved</p>
+        </div>
+    </footer>
+    <!--footer section end-->
+
+
+    <!--scroll top button start-->
+    <button type="button" class="scroll-top-btn"><i class="bi bi-arrow-up"></i></button>
+    <!--scroll top button end-->
+
+
+    <!--product modal start-->
+    <div class="modal fade" id="product_quickview">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="feature-image bg-light">
+                            <img src="{% static 'images/products/product-lg-1.png' %}" alt="not found" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="single-product-info">
+                            <a href="/shop-list/" class="category-btn text-uppercase fs-sm secondary-text-color d-inline-block mb-3">Neaklace</a>
+                            <h3 class="mb-4">Tony Gold Neaklace</h3>
+                            <div class="item-reivew d-flex align-items-center gap-3">
+                                <ul class="rating-star d-flex align-items-center gap-1 fs-sm">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                <span class="primary-text-color fw-light">(1 Customer review)</span>
+                            </div>
+                            <div class="pricing mt-4">
+                                <span class="primary-text-color">Rs.1500</span>
+                                <span class="pricing-devider primary-text-color">-</span>
+                                <span class="primary-text-color">Rs.4000</span>
+                            </div>
+                            <div class="short-description mt-40">
+                                <p class="mb-0 fw-light">Eget taciti odio cum habitant egestas conubia turpis phasellus, ante parturient
+                                    donec duis primis nam faucibus augue malesuada venenatis</p>
+                            </div>
+                            <ul class="single-product-features mt-40">
+                                <li>
+                                    <span class="me-2">
+                                        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.5 6H14.2812L11.125 9.15625C10.9375 9.34375 10.9375 9.6875 11.125 9.875C11.3125 10.0625 11.6562 10.0625 11.8438 9.875L15.8438 5.875C15.9375 5.78125 16 5.65625 16 5.5C16 5.375 15.9375 5.25 15.8438 5.15625L11.8438 1.15625C11.6562 0.96875 11.3125 0.96875 11.125 1.15625C10.9375 1.34375 10.9375 1.6875 11.125 1.875L14.2812 5H0.5C0.21875 5 0 5.25 0 5.5C0 5.78125 0.21875 6 0.5 6ZM15.5 12H1.6875L4.84375 8.875C5.03125 8.6875 5.03125 8.34375 4.84375 8.15625C4.65625 7.96875 4.3125 7.96875 4.125 8.15625L0.125 12.1562C0.03125 12.25 0 12.375 0 12.5C0 12.6562 0.03125 12.7812 0.125 12.875L4.125 16.875C4.3125 17.0625 4.65625 17.0625 4.84375 16.875C5.03125 16.6875 5.03125 16.3438 4.84375 16.1562L1.6875 13H15.5C15.75 13 16 12.7812 16 12.5C16 12.25 15.75 12 15.5 12Z" fill="#121111"/>
+                                        </svg>
+                                    </span>
+                                    Free returns
+                                </li>
+                                <li>
+                                    <span class="me-2">
+                                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 13C0.875 13 0 12.125 0 11V2C0 0.90625 0.875 0 2 0H11C12.0938 0 13 0.90625 13 2V3H15.0312C15.4688 3 15.875 3.21875 16.1562 3.53125L18.625 6.40625C18.8438 6.6875 19 7.03125 19 7.375V12H19.5C19.75 12 20 12.25 20 12.5C20 12.7812 19.75 13 19.5 13H18C18 14.6562 16.6562 16 15 16C13.3125 16 12 14.6562 12 13H7.96875C7.96875 14.6562 6.65625 16 4.96875 16C3.3125 16 1.96875 14.6562 1.96875 13H2ZM1 2V11C1 11.5625 1.4375 12 2 12H2.15625C2.5625 10.8438 3.6875 10 5 10C6.28125 10 7.40625 10.8438 7.8125 12H12V2C12 1.46875 11.5312 1 11 1H2C1.4375 1 1 1.46875 1 2ZM17.8125 7L15.4062 4.1875C15.3125 4.0625 15.1562 4 15.0312 4H13V7H17.8125ZM13 8V10.7812C13.5 10.3125 14.2188 10 15 10C16.2812 10 17.4062 10.8438 17.8125 12H18V8H13ZM5 11C3.875 11 3 11.9062 3 13C3 14.125 3.875 15 5 15C6.09375 15 7 14.125 7 13C7 11.9062 6.09375 11 5 11ZM15 15C16.0938 15 17 14.125 17 13C17 11.9062 16.0938 11 15 11C13.875 11 13 11.9062 13 13C13 14.125 13.875 15 15 15Z" fill="#121111"/>
+                                        </svg>
+                                    </span>
+                                    Free shipping via DHL, fully insured
+                                </li>
+                                <li>
+                                    <span class="me-2">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.34375 10.375C7.15625 10.5625 6.8125 10.5625 6.625 10.375L4.625 8.375C4.4375 8.1875 4.4375 7.84375 4.625 7.65625C4.8125 7.46875 5.15625 7.46875 5.34375 7.65625L7 9.3125L10.625 5.65625C10.8125 5.46875 11.1562 5.46875 11.3438 5.65625C11.5312 5.84375 11.5312 6.1875 11.3438 6.375L7.34375 10.375ZM16 8C16 12.4375 12.4062 16 8 16C3.5625 16 0 12.4375 0 8C0 3.59375 3.5625 0 8 0C12.4062 0 16 3.59375 16 8ZM8 1C4.125 1 1 4.15625 1 8C1 11.875 4.125 15 8 15C11.8438 15 15 11.875 15 8C15 4.15625 11.8438 1 8 1Z" fill="#121111"/>
+                                        </svg>
+                                    </span>
+                                    All taxes and customer duties included
+                                </li>
+                            </ul>
+                            <div class="d-flex align-items-center mt-40 gap-3 flex-wrap">
+                                <div class="quantity-box">
+                                    <button type="button" class="drecrement"><i class="fa-solid fa-minus"></i></button>
+                                    <input type="text" value="1">
+                                    <button type="button" class="drecrement"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                                <button type="button" class="add_to_cart_btn">Add to Cart<span class="ms-2"><i class="fa-solid fa-basket-shopping"></i></span></button>
+                                <button type="button" class="wish_btn">
+                                    <span class="me-2">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                    Add to Wishlist
+                                </button>
+                            </div>
+                            <ul class="product-meta mt-32">
+                                <li>SKU:17</li>
+                                <li>Categories: Light Bulb, Table</li>
+                                <li>Tags: Iluminate, Textured</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--product modal end-->
+
+    <!--Esential Js Files-->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/slick.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
+    <script src="{% static 'js/nice-select.js' %}"></script>
+    <script src="{% static 'js/fancybox.js' %}"></script>
+    <script src="{% static 'js/countdown.min.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+<!-- Mirrored from html.matethemes.com/uroan/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Jan 2024 09:29:30 GMT -->
+</html>

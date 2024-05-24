@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+{% load static %}
+<!--
+Author: Keenthemes
+Product Name: Metronic - Bootstrap 5 HTML, VueJS, React, Angular. Laravel, Asp.Net Core, Ruby on Rails, Spring Boot, Blazor, Django, Express.js, Node.js, Flask Admin Dashboard Theme & Template 
+Purchase: https://1.envato.market/EA4JP
+Website: http://www.keenthemes.com
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Dribbble: www.dribbble.com/keenthemes
+Like: www.facebook.com/keenthemes
+License: For each use you must have a valid license purchased only from above link in order to legally use the theme for your project.
+-->
+<html lang="en">
+	<!--begin::Head-->
+	
+<!-- Mirrored from preview.keenthemes.com/metronic8/demo27/authentication/layouts/fancy/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Dec 2022 06:53:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<title>JEMS & JEWELLERY</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask & Laravel versions. Grab your copy now and get life-time updates for free." />
+		<meta name="keywords" content="metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask & Laravel starter kits, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular. Laravel, Asp.Net Core, Ruby on Rails, Spring Boot, Blazor, Django, Express.js, Node.js, Flask Admin Dashboard Theme & Template" />
+		<meta property="og:url" content="https://keenthemes.com/metronic" />
+		<meta property="og:site_name" content="Keenthemes | Metronic" />
+		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+		<link rel="shortcut icon" href="{% static 'assets/media/logos/favicon.png' %}" />
+		<!--begin::Fonts(mandatory for all pages)-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+		<!--end::Fonts-->
+		<!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
+		<link href="{% static 'assets/plugins/global/plugins.bundle.css' %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'assets/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+		<!--end::Global Stylesheets Bundle-->
+		<!--Begin::Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '../../../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-5FS8GGP');</script>
+		<!--End::Google Tag Manager -->
+	</head>
+	<!--end::Head-->
+	<!--begin::Body-->
+	<body id="kt_body" class="app-blank app-blank">
+		<!--begin::Theme mode setup on page load-->
+		<script>var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-theme-mode")) { themeMode = document.documentElement.getAttribute("data-theme-mode"); } else { if ( localStorage.getItem("data-theme") !== null ) { themeMode = localStorage.getItem("data-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-theme", themeMode); }</script>
+		<!--end::Theme mode setup on page load-->
+		<!--Begin::Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FS8GGP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!--End::Google Tag Manager (noscript) -->
+		<!--begin::Root-->
+<!--		<div class="d-flex flex-column flex-root" id="kt_app_root">-->
+<!--			&lt;!&ndash;begin::Authentication - Sign-in &ndash;&gt;-->
+<!--			<div class="d-flex flex-column flex-lg-row flex-column-fluid">-->
+<!--				&lt;!&ndash;begin::Logo&ndash;&gt;-->
+<!--				<a href="../../../index.html" class="d-block d-lg-none mx-auto py-20">-->
+<!--					<img alt="Logo" src="{% static 'assets/media/logos/default.svg' %}" class="theme-light-show h-25px" />-->
+<!--					<img alt="Logo" src="{% static 'assets/media/logos/default-dark.svg' %}" class="theme-dark-show h-25px" />-->
+<!--				</a>-->
+<!--				&lt;!&ndash;end::Logo&ndash;&gt;-->
+<!--				&lt;!&ndash;begin::Aside&ndash;&gt;-->
+<!--				<div class="d-flex flex-column flex-column-fluid flex-center w-lg-50 p-10">-->
+<!--					&lt;!&ndash;begin::Wrapper&ndash;&gt;-->
+<!--					<div class="d-flex justify-content-between flex-column-fluid flex-column w-100 mw-450px">-->
+<!--						&lt;!&ndash;begin::Header&ndash;&gt;-->
+<!--						<div class="d-flex flex-stack py-2">-->
+<!--							&lt;!&ndash;begin::Back link&ndash;&gt;-->
+<!--							<div class="me-2"></div>-->
+<!--							&lt;!&ndash;end::Back link&ndash;&gt;-->
+<!--							&lt;!&ndash;begin::Sign Up link&ndash;&gt;-->
+<!--							<div class="m-0">-->
+<!--								<span class="text-gray-400 fw-bold fs-5 me-2" data-kt-translate="sign-in-head-desc">Not a Member yet?</span>-->
+<!--								<a href="/vendor/signupvendor/" class="link-primary fw-bold fs-5" data-kt-translate="sign-in-head-link">Sign Up</a>-->
+<!--							</div>-->
+<!--							&lt;!&ndash;end::Sign Up link=&ndash;&gt;-->
+<!--						</div>-->
+<!--						&lt;!&ndash;end::Header&ndash;&gt;-->
+<!--						&lt;!&ndash;begin::Body&ndash;&gt;-->
+<!--						<div class="py-20">-->
+
+
+<!--							&lt;!&ndash;begin::Form&ndash;&gt;-->
+<!--							<form  method="post"  action="/vendor/"  class="form w-100" novalidate="novalidate" >-->
+<!--								{% csrf_token %}-->
+<!--								&lt;!&ndash;begin::Body&ndash;&gt;-->
+<!--								<div class="card-body">-->
+<!--									&lt;!&ndash;begin::Heading&ndash;&gt;-->
+<!--									<div class="text-start mb-10">-->
+<!--										&lt;!&ndash;begin::Title&ndash;&gt;-->
+<!--										<h1 class="text-dark mb-3 fs-3x" data-kt-translate="sign-in-title">Sign In</h1>-->
+<!--										&lt;!&ndash;end::Title&ndash;&gt;-->
+<!--										&lt;!&ndash;begin::Text&ndash;&gt;-->
+<!--										<div class="text-gray-400 fw-semibold fs-6" data-kt-translate="general-desc">Get unlimited access & earn money</div>-->
+<!--										&lt;!&ndash;end::Link&ndash;&gt;-->
+<!--									</div>-->
+<!--									{% if messages %}-->
+<!--                                           {% for message in messages %}-->
+<!--                                            <div class="alert alert-danger alert-dismissible fade show" role="alert">-->
+<!--                                                {{message}}-->
+<!--                                                <script>-->
+<!--                                                    $('.alert').alert()-->
+<!--                                                </script>-->
+<!--                                            </div>-->
+<!--                                            {% endfor %}-->
+<!--                                    {% endif %}-->
+<!--									&lt;!&ndash;begin::Heading&ndash;&gt;-->
+<!--									&lt;!&ndash;begin::Input group=&ndash;&gt;-->
+<!--									<div class="fv-row mb-8">-->
+<!--										&lt;!&ndash;begin::Email&ndash;&gt;-->
+<!--										<input type="text" placeholder="Email" name="email" autocomplete="off" data-kt-translate="sign-in-input-email" class="form-control form-control-solid" />-->
+<!--										&lt;!&ndash;end::Email&ndash;&gt;-->
+<!--									</div>-->
+<!--									&lt;!&ndash;end::Input group=&ndash;&gt;-->
+<!--									<div class="fv-row mb-7">-->
+<!--										&lt;!&ndash;begin::Password&ndash;&gt;-->
+<!--										<input type="password" placeholder="Password" name="password" autocomplete="off" data-kt-translate="sign-in-input-password" class="form-control form-control-solid" />-->
+<!--										&lt;!&ndash;end::Password&ndash;&gt;-->
+<!--									</div>-->
+<!--									&lt;!&ndash;end::Input group=&ndash;&gt;-->
+<!--									&lt;!&ndash;begin::Wrapper&ndash;&gt;-->
+<!--									<div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-10">-->
+<!--										<div></div>-->
+<!--										&lt;!&ndash;begin::Link&ndash;&gt;-->
+<!--										<a href="/vendor/forgotpwvendor/" class="link-primary" data-kt-translate="sign-in-forgot-password">Forgot Password ?</a>-->
+<!--										&lt;!&ndash;end::Link&ndash;&gt;-->
+<!--									</div>-->
+<!--									&lt;!&ndash;end::Wrapper&ndash;&gt;-->
+<!--									&lt;!&ndash;begin::Actions&ndash;&gt;-->
+<!--									<div class="d-flex flex-stack">-->
+<!--										&lt;!&ndash;begin::Submit&ndash;&gt;-->
+<!--										<button id="kt_sign_in_submit" class="btn btn-primary me-2 flex-shrink-0">-->
+<!--											&lt;!&ndash;begin::Indicator label&ndash;&gt;-->
+<!--											<span class="indicator-label" data-kt-translate="sign-in-submit">Sign In</span>-->
+<!--											&lt;!&ndash;end::Indicator label&ndash;&gt;-->
+<!--											&lt;!&ndash;begin::Indicator progress&ndash;&gt;-->
+<!--											<span class="indicator-progress">-->
+<!--												<span data-kt-translate="general-progress">Please wait...</span>-->
+<!--												<span class="spinner-border spinner-border-sm align-middle ms-2"></span>-->
+<!--											</span>-->
+<!--											&lt;!&ndash;end::Indicator progress&ndash;&gt;-->
+<!--										</button>-->
+<!--										&lt;!&ndash;end::Submit&ndash;&gt;-->
+<!--										&lt;!&ndash;begin::Social&ndash;&gt;-->
+<!--										<div class="d-flex align-items-center">-->
+<!--											<div class="text-gray-400 fw-semibold fs-6 me-3 me-md-6" data-kt-translate="general-or">Or</div>-->
+<!--											&lt;!&ndash;begin::Symbol&ndash;&gt;-->
+<!--											<a href="#" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">-->
+<!--												<img alt="Logo" src="{% static 'assets/media/svg/brand-logos/google-icon.svg' %}" class="p-4" />-->
+<!--											</a>-->
+<!--											&lt;!&ndash;end::Symbol&ndash;&gt;-->
+<!--											&lt;!&ndash;begin::Symbol&ndash;&gt;-->
+<!--											<a href="#" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">-->
+<!--												<img alt="Logo" src="{% static 'assets/media/svg/brand-logos/facebook-3.svg' %}" class="p-4" />-->
+<!--											</a>-->
+<!--											&lt;!&ndash;end::Symbol&ndash;&gt;-->
+<!--											&lt;!&ndash;begin::Symbol&ndash;&gt;-->
+<!--											<a href="#" class="symbol symbol-circle symbol-45px w-45px bg-light">-->
+<!--												<img alt="Logo" src="{% static 'assets/media/svg/brand-logos/apple-black.svg' %}" class="theme-light-show p-4" />-->
+<!--												<img alt="Logo" src="{% static 'assets/media/svg/brand-logos/apple-black-dark.svg' %}" class="theme-dark-show p-4" />-->
+<!--											</a>-->
+<!--											&lt;!&ndash;end::Symbol&ndash;&gt;-->
+<!--										</div>-->
+<!--										&lt;!&ndash;end::Social&ndash;&gt;-->
+<!--									</div>-->
+<!--									&lt;!&ndash;end::Actions&ndash;&gt;-->
+<!--								</div>-->
+<!--								&lt;!&ndash;begin::Body&ndash;&gt;-->
+<!--							</form>-->
+<!--							&lt;!&ndash;end::Form&ndash;&gt;-->
+<!--						</div>-->
+<!--						&lt;!&ndash;end::Body&ndash;&gt;-->
+<!--						&lt;!&ndash;begin::Footer&ndash;&gt;-->
+<!--						<div class="m-0">-->
+<!--							&lt;!&ndash;begin::Toggle&ndash;&gt;-->
+<!--							<button class="btn btn-flex btn-link rotate" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" data-kt-menu-offset="0px, 0px">-->
+<!--								<img data-kt-element="current-lang-flag" class="w-25px h-25px rounded-circle me-3" src="{% static 'assets/media/flags/united-states.svg' %}" alt="" />-->
+<!--								<span data-kt-element="current-lang-name" class="me-2">English</span>-->
+<!--								&lt;!&ndash;begin::Svg Icon | path: icons/duotune/arrows/arr072.svg&ndash;&gt;-->
+<!--								<span class="svg-icon svg-icon-3 svg-icon-muted rotate-180 m-0">-->
+<!--									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--										<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />-->
+<!--									</svg>-->
+<!--								</span>-->
+<!--								&lt;!&ndash;end::Svg Icon&ndash;&gt;-->
+<!--							</button>-->
+<!--							&lt;!&ndash;end::Toggle&ndash;&gt;-->
+<!--							&lt;!&ndash;begin::Menu&ndash;&gt;-->
+<!--							<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-4" data-kt-menu="true" id="kt_auth_lang_menu">-->
+<!--								&lt;!&ndash;begin::Menu item&ndash;&gt;-->
+<!--								<div class="menu-item px-3">-->
+<!--									<a href="#" class="menu-link d-flex px-5" data-kt-lang="English">-->
+<!--										<span class="symbol symbol-20px me-4">-->
+<!--											<img data-kt-element="lang-flag" class="rounded-1" src="{% static 'assets/media/flags/united-states.svg' %}" alt="" />-->
+<!--										</span>-->
+<!--										<span data-kt-element="lang-name">English</span>-->
+<!--									</a>-->
+<!--								</div>-->
+<!--								&lt;!&ndash;end::Menu item&ndash;&gt;-->
+<!--								&lt;!&ndash;begin::Menu item&ndash;&gt;-->
+<!--								<div class="menu-item px-3">-->
+<!--									<a href="#" class="menu-link d-flex px-5" data-kt-lang="Spanish">-->
+<!--										<span class="symbol symbol-20px me-4">-->
+<!--											<img data-kt-element="lang-flag" class="rounded-1" src="{% static 'assets/media/flags/spain.svg' %}" alt="" />-->
+<!--										</span>-->
+<!--										<span data-kt-element="lang-name">Spanish</span>-->
+<!--									</a>-->
+<!--								</div>-->
+<!--								&lt;!&ndash;end::Menu item&ndash;&gt;-->
+<!--								&lt;!&ndash;begin::Menu item&ndash;&gt;-->
+<!--								<div class="menu-item px-3">-->
+<!--									<a href="#" class="menu-link d-flex px-5" data-kt-lang="German">-->
+<!--										<span class="symbol symbol-20px me-4">-->
+<!--											<img data-kt-element="lang-flag" class="rounded-1" src="{% static 'assets/media/flags/germany.svg' %}" alt="" />-->
+<!--										</span>-->
+<!--										<span data-kt-element="lang-name">German</span>-->
+<!--									</a>-->
+<!--								</div>-->
+<!--								&lt;!&ndash;end::Menu item&ndash;&gt;-->
+<!--								&lt;!&ndash;begin::Menu item&ndash;&gt;-->
+<!--								<div class="menu-item px-3">-->
+<!--									<a href="#" class="menu-link d-flex px-5" data-kt-lang="Japanese">-->
+<!--										<span class="symbol symbol-20px me-4">-->
+<!--											<img data-kt-element="lang-flag" class="rounded-1" src="{% static 'assets/media/flags/japan.svg' %}" alt="" />-->
+<!--										</span>-->
+<!--										<span data-kt-element="lang-name">Japanese</span>-->
+<!--									</a>-->
+<!--								</div>-->
+<!--								&lt;!&ndash;end::Menu item&ndash;&gt;-->
+<!--								&lt;!&ndash;begin::Menu item&ndash;&gt;-->
+<!--								<div class="menu-item px-3">-->
+<!--									<a href="#" class="menu-link d-flex px-5" data-kt-lang="French">-->
+<!--										<span class="symbol symbol-20px me-4">-->
+<!--											<img data-kt-element="lang-flag" class="rounded-1" src="{% static 'assets/media/flags/france.svg' %}" alt="" />-->
+<!--										</span>-->
+<!--										<span data-kt-element="lang-name">French</span>-->
+<!--									</a>-->
+<!--								</div>-->
+<!--								&lt;!&ndash;end::Menu item&ndash;&gt;-->
+<!--							</div>-->
+<!--							&lt;!&ndash;end::Menu&ndash;&gt;-->
+<!--						</div>-->
+<!--						&lt;!&ndash;end::Footer&ndash;&gt;-->
+<!--					</div>-->
+<!--					&lt;!&ndash;end::Wrapper&ndash;&gt;-->
+<!--				</div>-->
+<!--				&lt;!&ndash;end::Aside&ndash;&gt;-->
+<!--				&lt;!&ndash;begin::Body&ndash;&gt;-->
+<!--				<div class="d-none d-lg-flex flex-lg-row-fluid w-50 bgi-size-cover bgi-position-y-center bgi-position-x-start bgi-no-repeat" style="background-image: url({% static 'assets/media/auth/bg11.png' %})"></div>-->
+<!--				&lt;!&ndash;begin::Body&ndash;&gt;-->
+<!--			</div>-->
+<!--			&lt;!&ndash;end::Authentication - Sign-in&ndash;&gt;-->
+<!--		</div>-->
+
+<!--		Vendor login html start -->
+
+<!--		<style>-->
+<!--			.particle{-->
+<!--  position: relative;-->
+<!--  height: 100vh;-->
+<!--  overflow: hidden;-->
+<!--  display: flex;-->
+<!--  align-items: center;-->
+<!--  justify-content: center;-->
+<!--}-->
+
+<!--.container{-->
+<!--  position: absolute;-->
+<!--}-->
+
+<!--.container{-->
+<!-- background-color: #fff;-->
+<!--    border-radius: 30px;-->
+<!--    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);-->
+<!--    overflow: hidden;-->
+<!--    width: 768px;-->
+<!--    max-width: 100%;-->
+<!--    min-height: 480px;-->
+<!--    backdrop-filter: blur(1px);-->
+<!--}-->
+
+<!--.container p{-->
+<!--    margin: 20px 0;-->
+<!--}-->
+
+<!--.container a{-->
+<!--    color: #333;-->
+<!--    text-decoration: none;-->
+<!--    margin: 15px 0 10px;-->
+<!--}-->
+
+<!--.container button{-->
+<!--    color: #fff;-->
+<!--    padding: 10px 45px;-->
+<!--    border: 1px solid transparent;-->
+<!--    border-radius: 8px;-->
+<!--    text-transform: uppercase;-->
+<!--    margin-top: 10px;-->
+<!--    cursor: pointer;-->
+<!--}-->
+
+<!--.container button.hidden{-->
+<!--    background-color: transparent;-->
+<!--    border-color: #fff;-->
+<!--}-->
+
+<!--.container form{-->
+<!--    display: flex;-->
+<!--    align-items: center;-->
+<!--    justify-content: center;-->
+<!--    flex-direction: column;-->
+<!--    padding: 0 40px;-->
+<!--    height: 100%;-->
+<!--}-->
+
+<!--.container input{-->
+<!--    background-color: #eee;-->
+<!--    border: none;-->
+<!--    margin: 8px 0;-->
+<!--    padding: 10px 15px;-->
+<!--    border-radius: 8px;-->
+<!--    width: 100%;-->
+<!--    outline: none;-->
+<!--}-->
+
+<!--.form-container{-->
+<!--    position: absolute;-->
+<!--    top: 0;-->
+<!--    height: 100%;-->
+<!--    transition: all 0.6s ease-in-out;-->
+<!--}-->
+
+<!--.sign-in{-->
+<!--    left: 0;-->
+<!--    width: 50%;-->
+<!--    z-index: 2;-->
+<!--}-->
+
+
+<!--.container.active .sign-in{-->
+<!--    transform: translateX(100%);-->
+<!--    opacity: 0;-->
+<!--}-->
+
+<!--.sign-up{-->
+<!--    left: 0;-->
+<!--    width: 50%;-->
+<!--    opacity: 0;-->
+<!--    z-index: 1;-->
+<!--}-->
+
+<!--.container.active .sign-up{-->
+<!--    transform: translateX(100%);-->
+<!--    opacity: 1;-->
+<!--    z-index: 5;-->
+<!--    animation: move 0.6s;-->
+<!--}-->
+
+<!--@keyframes move{-->
+<!--    0%, 49.99%{-->
+<!--        opacity: 0;-->
+<!--        z-index: 1;-->
+<!--    }-->
+<!--    50%, 100%{-->
+<!--        opacity: 1;-->
+<!--        z-index: 5;-->
+<!--    }-->
+<!--}-->
+
+<!--.social-icons{-->
+<!--    margin: 20px 0;-->
+<!--}-->
+
+<!--.social-icons a{-->
+<!--    border: 1px solid #ccc;-->
+<!--    border-radius: 20%;-->
+<!--    display: inline-flex;-->
+<!--    justify-content: center;-->
+<!--    align-items: center;-->
+<!--    margin: 0 3px;-->
+<!--    width: 40px;-->
+<!--    height: 40px;-->
+<!--    font-size: 1.8vw;-->
+<!--}-->
+
+<!--.social-icons a:hover{-->
+<!--    background-color: #333;-->
+<!--    color: #fff;-->
+<!--    transition: all .5s ease;-->
+<!--}-->
+
+<!--.main_toggle{-->
+<!--    position: absolute;-->
+<!--    height: 100%;-->
+<!--    width: 200%;-->
+<!--}-->
+
+<!--.toggle-container{-->
+<!--    height: 100%;-->
+<!--    position: relative;-->
+<!--    width: 50%;-->
+<!--}-->
+
+<!--.toggle{-->
+<!--    display: flex;-->
+<!--    justify-content: center;-->
+<!--    align-items: center;-->
+<!--    text-align: center;-->
+<!--    height: 100%;-->
+<!--    transition: all 0.6s ease-in-out;-->
+<!--}-->
+
+<!--.toggle-panel{-->
+<!--    background-color: #00000080;-->
+<!--    color: #ffffff;-->
+<!--    padding: 0 30px;-->
+<!--    transition: all 0.6s ease-in-out;-->
+<!--}-->
+
+<!--.container.active .toggle-right{-->
+<!--    transition: all 0.6s ease-in-out;-->
+<!--    transform: translateX(-200%);-->
+<!--    opacity: 0;-->
+<!--}-->
+
+<!--.container.active .toggle-left{-->
+<!--    transform: translateX(0%);-->
+<!--    transition: all 0.6s ease-in-out;-->
+<!--}-->
+
+<!--.toggle-right{-->
+<!--    border-radius: 100px 0 0 100px;-->
+<!--    display: flex;-->
+<!--    flex-direction: column;-->
+<!--    align-items: center;-->
+<!--    justify-content: center;-->
+<!--    text-align: center;-->
+<!--    height: 100%;-->
+<!--}-->
+
+
+<!--.toggle-left{-->
+<!--    border-radius: 0 100px 100px 0;-->
+<!--    height: 100%;-->
+<!--    display: flex;-->
+<!--    flex-direction: column;-->
+<!--    align-items: center;-->
+<!--    justify-content: center;-->
+<!--    text-align: center;-->
+<!--    transform: translateX(-100%);-->
+<!--    height: 100%;-->
+<!--}-->
+<!--@font-face {-->
+<!--  font-family: 'Blackmagic';-->
+<!--  src: url(Fonts/Pieces\ of\ Eight.woff);-->
+<!--}-->
+
+<!--@font-face {-->
+<!--  font-family: 'Blackmagic_alt';-->
+<!--  src: url(Fonts/Pieces\ of\ Eight\ Alt.woff);-->
+<!--}-->
+
+<!--:root{-->
+<!--  &#45;&#45;black-magic: 'Blackmagic';-->
+<!--  &#45;&#45;black-magic-alt: 'Blackmagic_alt';-->
+<!--}-->
+
+<!--h1{-->
+<!--  font-family: var(&#45;&#45;black-magic);-->
+<!--  font-size: 3vw;-->
+<!--  letter-spacing: 1px;-->
+<!--  color: #333;-->
+<!--}-->
+
+<!--span{-->
+<!--  font-family: var(&#45;&#45;black-magic);-->
+<!--  font-size: 1.5vw;-->
+<!--  letter-spacing: 1px;-->
+<!--  text-transform: capitalize;-->
+<!--  color: #4deeea;-->
+<!--}-->
+
+<!--input{-->
+<!--  font-family: var(&#45;&#45;black-magic);-->
+<!--  font-size: 1.5vw ;-->
+<!--  letter-spacing: 1px;-->
+<!--  background-color: transparent ;-->
+<!--}-->
+
+<!--.sign-in .details{-->
+<!--  font-size: 2vw ;-->
+<!--}-->
+
+<!--.morph{-->
+<!--  background-color: transparent;-->
+<!--  box-shadow: 2000px 1000px 60px #00000040,-->
+<!--       inset -2000px -1000px 60px #ffffff40;-->
+<!--}-->
+
+<!--.morph_input{-->
+<!--  background-color: #ffffff66;-->
+<!--  backdrop-filter: blur(10px);-->
+<!--}-->
+
+<!--input::placeholder{-->
+<!--  color: rgb(22, 22, 22);-->
+<!--}-->
+
+<!--.for_get{-->
+<!--  font-family: var(&#45;&#45;black-magic);-->
+<!--  font-size: 1.5vw ;-->
+<!--  letter-spacing: 1px;-->
+<!--  color: #333;-->
+<!--}-->
+
+<!--.morph_button{-->
+<!--  background-color: #ff000060 ;-->
+<!--  backdrop-filter: blur(10px);-->
+<!--  border: 2px solid #ff000020 !important;-->
+<!--  font-family: var(&#45;&#45;black-magic);-->
+<!--  letter-spacing: 3px;-->
+<!--  color:#333!important-->
+<!--}-->
+<!--		</style>-->
+
+<!--		sahil new design css start -->
+
+		<style>
+			* {
+    margin: 0px;
+    font-family: Rubik;
+}
+
+.LoginPageContainer {
+    height: 100vh;
+    overflow: auto;
+}
+
+.LoginPageInnerContainer {
+    display: flex;
+    min-height: 100%;
+}
+
+.LoginPageInnerContainer .ImageContianer {
+    background-color: #e1dfec;
+    min-height: 100%;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginPageInnerContainer .ImageContianer .GroupImage {
+    width: 100%;
+    display: block;
+}
+
+.LoginPageInnerContainer .LoginFormContainer {
+    flex-grow: 2;
+    background-color: white;
+    min-height: 100%;
+    padding: 5%;
+    background: url(https://i.imgur.com/BKyjjFa.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .LogoContainer .logo {
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .header {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .subHeader {
+    color: #9aa4ad;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .inputContainer {
+    color: #3f3f45;
+    margin: 20px 0px;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .inputContainer .label {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 7px;
+    margin-bottom: 10px;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .inputContainer .label .labelIcon {
+    width: 20px;
+    margin-right: 10px;
+    display: block;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .inputContainer .input {
+    display: block;
+    width: calc(100% - 20px);
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #d6d7db;
+    border-radius: 5px;
+    margin-top: 5px;
+    outline: 0px !important;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .OptionsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.LoginFormContainer {
+    display: flex;
+    align-items: center;
+}
+
+.LoginFormInnerContainer {
+    width: 100%;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .checkbox {
+    width: 15px;
+    height: 15px;
+    margin: 0px;
+    display: block;
+    border: 1px solid #d6d7db;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .checkboxContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .checkboxContainer label {
+    display: block;
+    padding: 0px 5px;
+    color: #9aa4ad;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .ForgotPasswordLink {
+    color: #e7483b;
+    text-decoration: none;
+}
+
+.LoginFormContainer .LoginFormInnerContainer .LoginButton {
+    margin-top: 30px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #2e1f7a;
+    border: 0px;
+    outline: 0px;
+    cursor: pointer;
+}
+
+.LoginFormContainer .LoginFormInnerContainer .LoginButton:active {
+    background-color: #4520ff;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .LoginPageInnerContainer .ImageContianer {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .LoginPageInnerContainer .ImageContianer {
+        display: none;
+    }
+
+    .LoginFormContainer {
+        justify-content: center;
+    }
+}
+.LoginPageContainer::-webkit-scrollbar {
+    width: 5px;
+}
+
+.LoginPageContainer::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.LoginPageContainer::-webkit-scrollbar-thumb {
+    background: #2e1f7a;
+}
+
+.LoginPageContainer::-webkit-scrollbar-thumb:hover {
+    background: #4520ff;
+}
+		</style>
+
+
+<!--		<div class="particle"  id="particles-js">-->
+
+<!--        <div class="container" id="container">-->
+<!--            <div class="form-container sign-in">-->
+<!--                <form method="post" action="/vendorapp/">-->
+<!--                    <h1>Sign In</h1>-->
+<!--                    <div class="social-icons">-->
+<!--                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>-->
+<!--                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>-->
+<!--                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>-->
+<!--                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>-->
+<!--                    </div>-->
+<!--                    <input class="morph_input" type="text" name="username" placeholder="Username">-->
+<!--                    <input class="morph_input" type="password" name="password" placeholder="Password">-->
+<!--                    <a href="#" class="for_get">Forget Your Password?</a>-->
+<!--                    <button class="morph_button">Sign In</button>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--            <div class=" main_toggle morph">-->
+
+<!--                <div class="toggle-container">-->
+
+<!--                    <div class="toggle">-->
+<!--                        <div class="toggle-panel toggle-left">-->
+<!--                            <h1>Welcome Back!</h1>-->
+<!--                            <p>Enter your personal details to use lite features</p>-->
+<!--														<button class="hidden" id="signin">Sign Up</button>-->
+
+<!--                        </div>-->
+<!--                        <div class="toggle-panel toggle-right">-->
+<!--                            <h1>Hello, Friend!</h1>-->
+<!--                            <p>Register with your personal details to use all of site features</p>-->
+<!--							<button class="hidden" id="login">Sign Up</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+
+<!--    </div>-->
+
+<!--		sahil new design start -->
+
+
+		<div class="LoginPageContainer">
+    <div class="LoginPageInnerContainer">
+        <div class="ImageContianer">
+            <img src="https://i.imgur.com/MYZd7of.png" class="GroupImage">
+        </div>
+        <div class="LoginFormContainer">
+            <div class="LoginFormInnerContainer">
+<!--                <div class="LogoContainer">-->
+<!--                    <img src="https://www.pngkey.com/png/full/529-5291672_sample-logo-png-transparent-background.png" class="logo">-->
+<!--                </div>-->
+                <header class="header">Log In</header>
+                <header class="subHeader">Welcome to <b>animal planet!</b> Please Enter your Details</header>
+
+                <form method="post" action="/vendorapp/">
+					{% csrf_token %}
+                    <div class="inputContainer">
+                        <label class="label" for="emailAddress"><img src="https://i.imgur.com/Hn13wvm.png" class="labelIcon"><span>Username</span></label>
+                        <input type="text" class="input" name="username" id="emailAddress" placeholder="Enter your Username">
+                    </div>
+                    <div class="inputContainer">
+                        <label class="label" for="emailAddress"><img src="https://i.imgur.com/g5SvdfG.png"
+                                class="labelIcon"><span>Password*</span></label>
+                        <input type="password" class="input" id="emailAddress" name="password" placeholder="Enter your Password">
+                    </div>
+                    <div class="OptionsContainer">
+                        <div class="checkboxContainer">
+                            <input type="checkbox" id="RememberMe" class="checkbox"> <label for="RememberMe">Remember
+                                me</label>
+                        </div>
+                        <a href="/vendorapp/forgotpwvendor/" class="ForgotPasswordLink">Forgot Password?</a>
+                    </div>
+                    <button class="LoginButton">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--		Vendor login html end -->
+
+		<!--end::Root-->
+		<!--begin::Javascript-->
+		<script>var hostUrl = "../../../assets/index.html";</script>
+		<!--begin::Global Javascript Bundle(mandatory for all pages)-->
+		<script src="{% static 'assets/plugins/global/plugins.bundle.js' %}"></script>
+		<script src="{% static 'assets/js/scripts.bundle.js' %}"></script>
+		<!--end::Global Javascript Bundle-->
+		<!--begin::Custom Javascript(used for this page only)-->
+		<script src="{% static 'assets/js/custom/authentication/sign-in/general.js' %}"></script>
+		<script src="{% static 'assets/js/custom/authentication/sign-in/i18n.js' %}"></script>
+		<!--end::Custom Javascript-->
+		<!--end::Javascript-->
+	</body>
+	<!--end::Body-->
+
+<!-- Mirrored from preview.keenthemes.com/metronic8/demo27/authentication/layouts/fancy/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Dec 2022 06:53:46 GMT -->
+</html>

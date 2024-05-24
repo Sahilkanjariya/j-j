@@ -1,0 +1,261 @@
+{% extends 'empindex.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    @import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
+
+* {font-family: 'Open Sans', sans-serif;}
+
+.rwd-table {
+  margin: auto;
+  min-width: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+.rwd-table tr:first-child {
+  border-top: none;
+  background: #428bca;
+  color: #fff;
+}
+
+.rwd-table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f9fc;
+}
+
+.rwd-table tr:nth-child(odd):not(:first-child) {
+  background-color: #ebf3f9;
+}
+
+.rwd-table th {
+  display: none;
+}
+
+.rwd-table td {
+  display: block;
+}
+
+.rwd-table td:first-child {
+  margin-top: .5em;
+}
+
+.rwd-table td:last-child {
+  margin-bottom: .5em;
+}
+
+.rwd-table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 120px;
+  display: inline-block;
+  color: #000;
+}
+
+.rwd-table th,
+.rwd-table td {
+  text-align: left;
+}
+
+.rwd-table {
+  color: #333;
+  border-radius: .4em;
+  overflow: hidden;
+}
+
+.rwd-table tr {
+  border-color: #bfbfbf;
+}
+
+.rwd-table th,
+.rwd-table td {
+  padding: .5em 1em;
+}
+@media screen and (max-width: 601px) {
+  .rwd-table tr:nth-child(2) {
+    border-top: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  .rwd-table tr:hover:not(:first-child) {
+    background-color: #d8e7f3;
+  }
+  .rwd-table td:before {
+    display: none;
+  }
+  .rwd-table th,
+  .rwd-table td {
+    display: table-cell;
+    padding: .25em .5em;
+  }
+  .rwd-table th:first-child,
+  .rwd-table td:first-child {
+    padding-left: 0;
+  }
+  .rwd-table th:last-child,
+  .rwd-table td:last-child {
+    padding-right: 0;
+  }
+  .rwd-table th,
+  .rwd-table td {
+    padding: 1em !important;
+  }
+}
+
+
+/* THE END OF THE IMPORTANT STUFF */
+
+h1 {
+  text-align: center;
+  font-size: 2.4em;
+  color: #f2f2f2;
+}
+.container {
+  display: block;
+  text-align: center;
+}
+h3 {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 1.5em;
+  color: #cecece;
+}
+h3:before {
+  content: "\25C0";
+  position: absolute;
+  left: -50px;
+  -webkit-animation: leftRight 2s linear infinite;
+  animation: leftRight 2s linear infinite;
+}
+h3:after {
+  content: "\25b6";
+  position: absolute;
+  right: -50px;
+  -webkit-animation: leftRight 2s linear infinite reverse;
+  animation: leftRight 2s linear infinite reverse;
+}
+@-webkit-keyframes leftRight {
+  0%    { -webkit-transform: translateX(0)}
+  25%   { -webkit-transform: translateX(-10px)}
+  75%   { -webkit-transform: translateX(10px)}
+  100%  { -webkit-transform: translateX(0)}
+}
+@keyframes leftRight {
+  0%    { transform: translateX(0)}
+  25%   { transform: translateX(-10px)}
+  75%   { transform: translateX(10px)}
+  100%  { transform: translateX(0)}
+}
+
+/*
+    Don't look at this last part. It's unnecessary. I was just playing with pixel gradients... Don't judge.
+*/
+/*
+@media screen and (max-width: 601px) {
+  .rwd-table tr {
+    background-image: -webkit-linear-gradient(left, #428bca 137px, #f5f9fc 1px, #f5f9fc 100%);
+    background-image: -moz-linear-gradient(left, #428bca 137px, #f5f9fc 1px, #f5f9fc 100%);
+    background-image: -o-linear-gradient(left, #428bca 137px, #f5f9fc 1px, #f5f9fc 100%);
+    background-image: -ms-linear-gradient(left, #428bca 137px, #f5f9fc 1px, #f5f9fc 100%);
+    background-image: linear-gradient(left, #428bca 137px, #f5f9fc 1px, #f5f9fc 100%);
+  }
+  .rwd-table tr:nth-child(odd) {
+    background-image: -webkit-linear-gradient(left, #428bca 137px, #ebf3f9 1px, #ebf3f9 100%);
+    background-image: -moz-linear-gradient(left, #428bca 137px, #ebf3f9 1px, #ebf3f9 100%);
+    background-image: -o-linear-gradient(left, #428bca 137px, #ebf3f9 1px, #ebf3f9 100%);
+    background-image: -ms-linear-gradient(left, #428bca 137px, #ebf3f9 1px, #ebf3f9 100%);
+    background-image: linear-gradient(left, #428bca 137px, #ebf3f9 1px, #ebf3f9 100%);
+  }
+}*/
+</style>
+
+<!--<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">-->
+<!--    <thead>-->
+<!--          <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">-->
+<!--              <th class="w-10px pe-2">-->
+<!--                  <div class="form-check form-check-sm form-check-custom form-check-solid me-3">-->
+<!--                      <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1" />-->
+<!--                  </div>-->
+<!--              </th>-->
+
+<!--              <th class="min-w-125px">ID</th>-->
+<!--              <th class="min-w-125px">Username</th>-->
+<!--              <th class="min-w-125px">Firstname</th>-->
+<!--              <th class="min-w-125px">Lastname</th>-->
+<!--              <th class="min-w-125px">Email</th>-->
+<!--              <th class="min-w-125px">Address</th>-->
+<!--              <th class="min-w-125px">Phone No.</th>-->
+<!--          </tr>-->
+<!--    </thead>-->
+<!--    <tbody class="fw-semibold text-gray-600">-->
+<!--    {% for order in orders %}-->
+<!--         <tr>-->
+<!--             <td>-->
+<!--                 <div class="form-check form-check-sm form-check-custom form-check-solid">-->
+<!--                     <input class="form-check-input" type="checkbox" value="1" />-->
+<!--                 </div>-->
+<!--             </td>-->
+<!--             <td>{{forloop.counter}}</td>-->
+<!--             <td>{{order.user}}</td>-->
+<!--             <td>{{order.fname}}</td>-->
+<!--             <td>{{order.lname}}</td>-->
+<!--             <td>{{order.email}}</td>-->
+<!--             <td>{{order.address}}</td>-->
+<!--             <td>{{order.phone}}</td>-->
+<!--         </tr>-->
+<!--    {% endfor %}-->
+<!--    </tbody>-->
+<!--</table>-->
+
+<!--New Table Design Start -->
+
+<div class="container">
+  <table class="rwd-table">
+    <tbody>
+      <tr>
+        <th>Select</th>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Phone No.</th>
+      </tr>
+      {% for order in orders %}
+      <tr>
+           <td>
+                 <div class="form-check form-check-sm form-check-custom form-check-solid">
+                     <input class="form-check-input" type="checkbox" value="1" />
+                 </div>
+             </td>
+        <td data-th="ID">
+          {{forloop.counter}}
+        </td>
+        <td data-th="Username">
+          {{order.user}}
+        </td>
+        <td data-th="Firstname">
+          {{order.fname}}
+        </td>
+        <td data-th="Lastname">
+         {{order.lname}}
+        </td>
+        <td data-th="Email">
+          {{order.email}}
+        </td>
+        <td data-th="Address">
+          {{order.address}}
+        </td><td data-th="Phone No.">
+          {{order.phone}}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<!--New Table Design End -->
+{% endblock %}

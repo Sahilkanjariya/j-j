@@ -1,0 +1,45 @@
+{% extends 'adminheader.html' %}
+{% load static %}
+{% block content %}
+<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
+    <thead>
+          <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+              <th class="w-10px pe-2">
+                  <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+                      <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1" />
+                  </div>
+              </th>
+
+              <th class="min-w-125px">ID</th>
+              <th class="min-w-125px">Username</th>
+              <th class="min-w-125px">Firstname</th>
+              <th class="min-w-125px">Lastname</th>
+              <th class="min-w-125px">Email</th>
+          </tr>
+    </thead>
+    <tbody class="fw-semibold text-gray-600">
+    {% for i in v %}
+         <tr>
+             <td>
+                 <div class="form-check form-check-sm form-check-custom form-check-solid">
+                     <input class="form-check-input" type="checkbox" value="1" />
+                 </div>
+             </td>
+             <td>{{forloop.counter}}</td>
+             <td>{{i.user.username}}</td>
+             <td>{{i.user.first_name}}</td>
+             <td>{{i.user.last_name}}</td>
+             <td>{{i.user.email}}</td>
+
+
+
+             <td>
+<!--               <a href="">Edit Employee</a>-->
+              <a href="/adminapp/deletevendor/{{i.id}}">Delete Vendor</a>
+            </td>
+         </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<center><a href="/adminapp/addvendor/">Add Vendor</a></center>
+{% endblock %}

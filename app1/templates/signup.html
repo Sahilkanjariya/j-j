@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+     .mmtb{
+    padding: 50px 0px;
+    }
+</style>
+
+    <!--breadcrumb section start-->
+    <div class="breadcrumb-section pt-40 pb-40" data-background="{% static 'images/shapes/breadcrumb-bg.jpg' %}">
+        <div class="container">
+            <p class="breadcrumb-text fw-light mb-0"><a href="/index/">Home</a> / <span class="primary-text-color">Login</span></p>
+        </div>
+    </div>
+    <!--breadcrumb section end-->
+    <!--login area start-->
+    <div class="login-area ptb-120 mmtb  bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                     {% for message in messages %}
+                         <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                         <strong>Message:</strong> {{ message }}
+                         <button type="button" class="close" data-dismissble="alert" aria-label="close">
+                         <span aria-hidden="true">&times;</span>
+                         </button>
+                         </div>
+                     {% endfor %}
+                    <form class="theme-form" action="/signup/" method="post">
+                        {% csrf_token %}
+                        <h3 class="mb-40">Register Your  Account</h3>
+                        <p>Enter Username</p>
+                        <input type="text" placeholder="Enter your username" name="username" class="theme-input">
+                        <p>Enter First Name</p>
+                        <input type="text" placeholder="Enter your Firstname" name="firstname" class="theme-input">
+                        <p>Enter Last Name</p>
+                        <input type="text" placeholder="Enter your lastname" name="lastname" class="theme-input">
+                        <p>Enter Email</p>
+                        <input type="email" placeholder="Enter Your Email address" name="email" class="theme-input">
+                        <p>Enter Contact Number</p>
+                        <input type="tel" placeholder="Enter contact no" name="contact" class="theme-input" minlength="10" maxlength="10">
+                        <p>Enter Password</p>
+                        <input type="password" placeholder="Enter Password" name="password" class="theme-input">
+                        <p class="mt-3">Enter Confirm Password</p>
+                        <input type="password" placeholder="Password*"name="confirm_password" class="theme-input mt-3">
+                        <div class="forgot-password d-flex align-items-center justify-content-between gap-2 mt-32 flex-wrap">
+                            <label class="mb-0"><input type="checkbox"> Remember me</label>
+                            <a href="#" class="secondary-text-color">Lost your password?</a>
+                        </div>
+                        <button type="submit" class="template-btn primary-btn w-100 mt-32"><span>Login</span></button>
+                        <p class="mb-0 mt-32">Already registered ? <a href="/login/" class="secondary-text-color">Log int your account</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--login area end-->
+
+    <!--newsletter section start-->
+<!--    <section class="newsletter-section light-bg ptb-120 mmtb  position-relative z-1">-->
+<!--        <img src="{% static 'images/shapes/neaklace.png' %}" alt="neaklace" class="position-absolute end-0 top-0 z&#45;&#45;1 d-none d-xxl-block">-->
+<!--        <div class="container">-->
+<!--            <div class="row justify-content-center">-->
+<!--                <div class="col-xl-6">-->
+<!--                    <div class="newsletter-box text-center">-->
+<!--                        <span class="fs-sm fw-light secondary-text-color">GET OUR NEWSLETTER</span>-->
+<!--                        <h2 class="fw-normal mt-4 mb-50">Get News & Update to Your Inbox</h2>-->
+<!--                        <form class="newsletter-form d-flex align-items-center">-->
+<!--                            <input type="email" placeholder=" Email address...">-->
+<!--                            <button type="submit" class="template-btn primary-btn"><span>Subscribe</span></button>-->
+<!--                        </form>-->
+<!--                        <p class="mb-0 mt-32 fw-light">Will be used accordance with our <a href="#" class="text-decoration-underline primary-text-color hover-secondary">Privacy Policy</a></p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+    <!--newsletter section end-->
+
+   {% endblock %}

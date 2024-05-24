@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+{% load static %}
+<!--
+Author: Keenthemes
+Product Name: Metronic - Bootstrap 5 HTML, VueJS, React, Angular. Laravel, Asp.Net Core, Ruby on Rails, Spring Boot, Blazor, Django, Express.js, Node.js, Flask Admin Dashboard Theme & Template
+Purchase: https://1.envato.market/EA4JP
+Website: http://www.keenthemes.com
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Dribbble: www.dribbble.com/keenthemes
+Like: www.facebook.com/keenthemes
+License: For each use you must have a valid license purchased only from above link in order to legally use the theme for your project.
+-->
+<html lang="en">
+	<!--begin::Head-->
+
+<!-- Mirrored from preview.keenthemes.com/metronic8/demo27/authentication/layouts/fancy/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Dec 2022 06:53:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<title>JEMS & JEWELLERY</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask & Laravel versions. Grab your copy now and get life-time updates for free." />
+		<meta name="keywords" content="metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask & Laravel starter kits, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular. Laravel, Asp.Net Core, Ruby on Rails, Spring Boot, Blazor, Django, Express.js, Node.js, Flask Admin Dashboard Theme & Template" />
+		<meta property="og:url" content="https://keenthemes.com/metronic" />
+		<meta property="og:site_name" content="Keenthemes | Metronic" />
+		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+		<link rel="shortcut icon" href="{% static 'assets/media/logos/favicon.png' %}" />
+		<!--begin::Fonts(mandatory for all pages)-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+		<!--end::Fonts-->
+		<!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
+		<link href="{% static 'assets/plugins/global/plugins.bundle.css' %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'assets/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+		<!--end::Global Stylesheets Bundle-->
+		<!--Begin::Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '../../../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-5FS8GGP');</script>
+		<!--End::Google Tag Manager -->
+	</head>
+	<!--end::Head-->
+	<!--begin::Body-->
+	<body id="kt_body" class="app-blank app-blank">
+		<!--begin::Theme mode setup on page load-->
+		<script>var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-theme-mode")) { themeMode = document.documentElement.getAttribute("data-theme-mode"); } else { if ( localStorage.getItem("data-theme") !== null ) { themeMode = localStorage.getItem("data-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-theme", themeMode); }</script>
+		<!--end::Theme mode setup on page load-->
+		<!--Begin::Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FS8GGP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!--End::Google Tag Manager (noscript) -->
+<!--		Vendor login html start -->
+
+<!--		<style>-->
+<!--			.particle{-->
+<!--  position: relative;-->
+<!--  height: 100vh;-->
+<!--  overflow: hidden;-->
+<!--  display: flex;-->
+<!--  align-items: center;-->
+<!--  justify-content: center;-->
+<!--}-->
+
+<!--.container{-->
+<!--  position: absolute;-->
+<!--}-->
+
+<!--.container{-->
+<!-- background-color: #fff;-->
+<!--    border-radius: 30px;-->
+<!--    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);-->
+<!--    overflow: hidden;-->
+<!--    width: 768px;-->
+<!--    max-width: 100%;-->
+<!--    min-height: 480px;-->
+<!--    backdrop-filter: blur(1px);-->
+<!--}-->
+
+<!--.container p{-->
+<!--    margin: 20px 0;-->
+<!--}-->
+
+<!--.container a{-->
+<!--    color: #333;-->
+<!--    text-decoration: none;-->
+<!--    margin: 15px 0 10px;-->
+<!--}-->
+
+<!--.container button{-->
+<!--    color: #fff;-->
+<!--    padding: 10px 45px;-->
+<!--    border: 1px solid transparent;-->
+<!--    border-radius: 8px;-->
+<!--    text-transform: uppercase;-->
+<!--    margin-top: 10px;-->
+<!--    cursor: pointer;-->
+<!--}-->
+
+<!--.container button.hidden{-->
+<!--    background-color: transparent;-->
+<!--    border-color: #fff;-->
+<!--}-->
+
+<!--.container form{-->
+<!--    display: flex;-->
+<!--    align-items: center;-->
+<!--    justify-content: center;-->
+<!--    flex-direction: column;-->
+<!--    padding: 0 40px;-->
+<!--    height: 100%;-->
+<!--}-->
+
+<!--.container input{-->
+<!--    background-color: #eee;-->
+<!--    border: none;-->
+<!--    margin: 8px 0;-->
+<!--    padding: 10px 15px;-->
+<!--    border-radius: 8px;-->
+<!--    width: 100%;-->
+<!--    outline: none;-->
+<!--}-->
+
+<!--.form-container{-->
+<!--    position: absolute;-->
+<!--    top: 0;-->
+<!--    height: 100%;-->
+<!--    transition: all 0.6s ease-in-out;-->
+<!--}-->
+
+<!--.sign-in{-->
+<!--    left: 0;-->
+<!--    width: 50%;-->
+<!--    z-index: 2;-->
+<!--}-->
+
+
+<!--.container.active .sign-in{-->
+<!--    transform: translateX(100%);-->
+<!--    opacity: 0;-->
+<!--}-->
+
+<!--.sign-up{-->
+<!--    left: 0;-->
+<!--    width: 50%;-->
+<!--    opacity: 0;-->
+<!--    z-index: 1;-->
+<!--}-->
+
+<!--.container.active .sign-up{-->
+<!--    transform: translateX(100%);-->
+<!--    opacity: 1;-->
+<!--    z-index: 5;-->
+<!--    animation: move 0.6s;-->
+<!--}-->
+
+<!--@keyframes move{-->
+<!--    0%, 49.99%{-->
+<!--        opacity: 0;-->
+<!--        z-index: 1;-->
+<!--    }-->
+<!--    50%, 100%{-->
+<!--        opacity: 1;-->
+<!--        z-index: 5;-->
+<!--    }-->
+<!--}-->
+
+<!--.social-icons{-->
+<!--    margin: 20px 0;-->
+<!--}-->
+
+<!--.social-icons a{-->
+<!--    border: 1px solid #ccc;-->
+<!--    border-radius: 20%;-->
+<!--    display: inline-flex;-->
+<!--    justify-content: center;-->
+<!--    align-items: center;-->
+<!--    margin: 0 3px;-->
+<!--    width: 40px;-->
+<!--    height: 40px;-->
+<!--    font-size: 1.8vw;-->
+<!--}-->
+
+<!--.social-icons a:hover{-->
+<!--    background-color: #333;-->
+<!--    color: #fff;-->
+<!--    transition: all .5s ease;-->
+<!--}-->
+
+<!--.main_toggle{-->
+<!--    position: absolute;-->
+<!--    height: 100%;-->
+<!--    width: 200%;-->
+<!--}-->
+
+<!--.toggle-container{-->
+<!--    height: 100%;-->
+<!--    position: relative;-->
+<!--    width: 50%;-->
+<!--}-->
+
+<!--.toggle{-->
+<!--    display: flex;-->
+<!--    justify-content: center;-->
+<!--    align-items: center;-->
+<!--    text-align: center;-->
+<!--    height: 100%;-->
+<!--    transition: all 0.6s ease-in-out;-->
+<!--}-->
+
+<!--.toggle-panel{-->
+<!--    background-color: #00000080;-->
+<!--    color: #ffffff;-->
+<!--    padding: 0 30px;-->
+<!--    transition: all 0.6s ease-in-out;-->
+<!--}-->
+
+<!--.container.active .toggle-right{-->
+<!--    transition: all 0.6s ease-in-out;-->
+<!--    transform: translateX(-200%);-->
+<!--    opacity: 0;-->
+<!--}-->
+
+<!--.container.active .toggle-left{-->
+<!--    transform: translateX(0%);-->
+<!--    transition: all 0.6s ease-in-out;-->
+<!--}-->
+
+<!--.toggle-right{-->
+<!--    border-radius: 100px 0 0 100px;-->
+<!--    display: flex;-->
+<!--    flex-direction: column;-->
+<!--    align-items: center;-->
+<!--    justify-content: center;-->
+<!--    text-align: center;-->
+<!--    height: 100%;-->
+<!--}-->
+
+
+<!--.toggle-left{-->
+<!--    border-radius: 0 100px 100px 0;-->
+<!--    height: 100%;-->
+<!--    display: flex;-->
+<!--    flex-direction: column;-->
+<!--    align-items: center;-->
+<!--    justify-content: center;-->
+<!--    text-align: center;-->
+<!--    transform: translateX(-100%);-->
+<!--    height: 100%;-->
+<!--}-->
+<!--@font-face {-->
+<!--  font-family: 'Blackmagic';-->
+<!--  src: url(Fonts/Pieces\ of\ Eight.woff);-->
+<!--}-->
+
+<!--@font-face {-->
+<!--  font-family: 'Blackmagic_alt';-->
+<!--  src: url(Fonts/Pieces\ of\ Eight\ Alt.woff);-->
+<!--}-->
+
+<!--:root{-->
+<!--  &#45;&#45;black-magic: 'Blackmagic';-->
+<!--  &#45;&#45;black-magic-alt: 'Blackmagic_alt';-->
+<!--}-->
+
+<!--h1{-->
+<!--  font-family: var(&#45;&#45;black-magic);-->
+<!--  font-size: 3vw;-->
+<!--  letter-spacing: 1px;-->
+<!--  color: #333;-->
+<!--}-->
+
+<!--span{-->
+<!--  font-family: var(&#45;&#45;black-magic);-->
+<!--  font-size: 1.5vw;-->
+<!--  letter-spacing: 1px;-->
+<!--  text-transform: capitalize;-->
+<!--  color: #4deeea;-->
+<!--}-->
+
+<!--input{-->
+<!--  font-family: var(&#45;&#45;black-magic);-->
+<!--  font-size: 1.5vw ;-->
+<!--  letter-spacing: 1px;-->
+<!--  background-color: transparent ;-->
+<!--}-->
+
+<!--.sign-in .details{-->
+<!--  font-size: 2vw ;-->
+<!--}-->
+
+<!--.morph{-->
+<!--  background-color: transparent;-->
+<!--  box-shadow: 2000px 1000px 60px #00000040,-->
+<!--       inset -2000px -1000px 60px #ffffff40;-->
+<!--}-->
+
+<!--.morph_input{-->
+<!--  background-color: #ffffff66;-->
+<!--  backdrop-filter: blur(10px);-->
+<!--}-->
+
+<!--input::placeholder{-->
+<!--  color: rgb(22, 22, 22);-->
+<!--}-->
+
+<!--.for_get{-->
+<!--  font-family: var(&#45;&#45;black-magic);-->
+<!--  font-size: 1.5vw ;-->
+<!--  letter-spacing: 1px;-->
+<!--  color: #333;-->
+<!--}-->
+
+<!--.morph_button{-->
+<!--  background-color: #ff000060 ;-->
+<!--  backdrop-filter: blur(10px);-->
+<!--  border: 2px solid #ff000020 !important;-->
+<!--  font-family: var(&#45;&#45;black-magic);-->
+<!--  letter-spacing: 3px;-->
+<!--  color:#333!important-->
+<!--}-->
+<!--		</style>-->
+
+<!--		<div class="particle"  id="particles-js">-->
+
+<!--        <div class="container" id="container">-->
+<!--            <div class="form-container sign-in">-->
+<!--				 {% for message in messages %}-->
+<!--					 <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">-->
+<!--					 <strong>Message:</strong> {{ message }}-->
+<!--					 <button type="button" class="close" data-dismissble="alert" aria-label="close">-->
+<!--					 <span aria-hidden="true">&times;</span>-->
+<!--					 </button>-->
+<!--					 </div>-->
+<!--				 {% endfor %}-->
+
+<!--                <form method="post" action="/emp/">-->
+<!--					{% csrf_token %}-->
+<!--                    <h1>Sign In</h1>-->
+<!--                    <div class="social-icons">-->
+<!--                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>-->
+<!--                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>-->
+<!--                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>-->
+<!--                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>-->
+<!--                    </div>-->
+<!--                    <input class="morph_input" name="username" type="text" placeholder="Username">-->
+<!--                    <input class="morph_input"  name="password" type="password" placeholder="Password">-->
+<!--                    <a href="#" class="for_get">Forget Your Password?</a>-->
+<!--                    <button class="morph_button">Sign In</button>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--            <div class=" main_toggle morph">-->
+
+<!--                <div class="toggle-container">-->
+
+<!--                    <div class="toggle">-->
+<!--                        <div class="toggle-panel toggle-left">-->
+<!--                            <h1>Welcome Back!</h1>-->
+<!--                            <p>Enter your personal details to use all of site features</p>-->
+<!--                        </div>-->
+<!--                        <div class="toggle-panel toggle-right">-->
+<!--                            <h1>Hello, Friend!</h1>-->
+<!--                            <p>Register with your personal details to use all of site features</p>-->
+<!--							<button class="hidden" id="login">Sign Up</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+
+<!--    </div>-->
+
+<!--		new emp copy-signinpage start -->
+
+		<div class="d-flex flex-column flex-root" id="kt_app_root">
+			<!--begin::Authentication - Sign-in -->
+			<div class="d-flex flex-column flex-lg-row flex-column-fluid">
+				<!--begin::Logo-->
+				<a href="../../../index.html" class="d-block d-lg-none mx-auto py-20">
+					<img alt="Logo" src="{% static 'assets/media/logos/default.svg' %}" class="theme-light-show h-25px" />
+					<img alt="Logo" src="{% static 'assets/media/logos/default-dark.svg' %}" class="theme-dark-show h-25px" />
+				</a>
+				<!--end::Logo-->
+				<!--begin::Aside-->
+				<div class="d-flex flex-column flex-column-fluid flex-center w-lg-50 p-10">
+					<!--begin::Wrapper-->
+					<div class="d-flex justify-content-between flex-column-fluid flex-column w-100 mw-450px">
+						<!--begin::Header-->
+						<div class="d-flex flex-stack py-2">
+							<!--begin::Back link-->
+							<div class="me-2"></div>
+							<!--end::Back link-->
+							<!--begin::Sign Up link-->
+<!--							<div class="m-0">-->
+<!--								<span class="text-gray-400 fw-bold fs-5 me-2" data-kt-translate="sign-in-head-desc">Not a Member yet?</span>-->
+<!--								<a href="/vendor/vendorsignup/" class="link-primary fw-bold fs-5" data-kt-translate="sign-in-head-link">Sign Up</a>-->
+<!--							</div>-->
+							<!--end::Sign Up link=-->
+						</div>
+						<!--end::Header-->
+						<!--begin::Body-->
+						<div class="py-20">
+							<!--begin::Form-->
+							{% for msg in messages %}
+							 {{ msg }}
+							{% endfor %}
+							<form class="form w-100" action="" method="post">
+								{% csrf_token %}
+								<!--begin::Body-->
+								<div class="card-body">
+									<!--begin::Heading-->
+									<div class="text-start mb-10">
+										<!--begin::Title-->
+										<h1 class="text-dark mb-3 fs-3x" data-kt-translate="sign-in-title">Sign In</h1>
+										<!--end::Title-->
+										<!--begin::Text-->
+<!--										<div class="text-gray-400 fw-semibold fs-6" data-kt-translate="general-desc">Get unlimited access & earn money</div>-->
+										<!--end::Link-->
+									</div>
+									<!--begin::Heading-->
+									<!--begin::Input group=-->
+									<div class="fv-row mb-8">
+										<!--begin::Email-->
+										<input type="text" placeholder="username" name="username" class="form-control form-control-solid" />
+										<!--end::Email-->
+									</div>
+									<!--end::Input group=-->
+									<div class="fv-row mb-7">
+										<!--begin::Password-->
+										<input type="password" maxlength="5" placeholder="Password" name="password" class="form-control form-control-solid" />
+										<!--end::Password-->
+									</div>
+									<!--end::Input group=-->
+									<!--begin::Wrapper-->
+									<div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-10">
+										<div></div>
+										<!--begin::Link-->
+										<a href="/adminapp/adminforgot" class="link-primary" data-kt-translate="sign-in-forgot-password">Forgot Password ?</a>
+										<!--end::Link-->
+									</div>
+									<!--end::Wrapper-->
+									<!--begin::Actions-->
+									<div class="d-flex flex-stack">
+										<!--begin::Submit-->
+										<button type="submit" class="btn btn-primary me-2 flex-shrink-0">Sign In
+											<!--begin::Indicator label-->
+<!--											<span class="indicator-label" data-kt-translate="sign-in-submit">Sign In</span>-->
+											<!--end::Indicator label-->
+											<!--begin::Indicator progress-->
+<!--											<span class="indicator-progress">-->
+<!--												<span data-kt-translate="general-progress">Please wait...</span>-->
+<!--												<span class="spinner-border spinner-border-sm align-middle ms-2"></span>-->
+<!--											</span>-->
+											<!--end::Indicator progress-->
+										</button>
+										<!--end::Submit-->
+									</div>
+									<!--end::Actions-->
+								</div>
+								<!--begin::Body-->
+							</form>
+							<!--end::Form-->
+						</div>
+						<!--end::Body-->
+						<!--begin::Footer-->
+					</div>
+					<!--end::Wrapper-->
+				</div>
+				<!--end::Aside-->
+				<!--begin::Body-->
+				<div class="d-none d-lg-flex flex-lg-row-fluid w-50 bgi-size-cover bgi-position-y-center bgi-position-x-start bgi-no-repeat">
+					<img src="{% static 'assets/media/auth/12.JPG' %}" style="width: 600px; height: 97%; margin-top:10px; margin-left:70px;">
+				</div>
+
+				<!--begin::Body-->
+			</div>
+			<!--end::Authentication - Sign-in-->
+		</div>
+<!--		new emp copy-signinpage end -->
+
+
+
+<!--		Vendor login html end -->
+
+		<!--end::Root-->
+		<!--begin::Javascript-->
+		<script>var hostUrl = "../../../assets/index.html";</script>
+		<!--begin::Global Javascript Bundle(mandatory for all pages)-->
+		<script src="{% static 'assets/plugins/global/plugins.bundle.js' %}"></script>
+		<script src="{% static 'assets/js/scripts.bundle.js' %}"></script>
+		<!--end::Global Javascript Bundle-->
+		<!--begin::Custom Javascript(used for this page only)-->
+		<script src="{% static 'assets/js/custom/authentication/sign-in/general.js' %}"></script>
+		<script src="{% static 'assets/js/custom/authentication/sign-in/i18n.js' %}"></script>
+		<!--end::Custom Javascript-->
+		<!--end::Javascript-->
+	</body>
+	<!--end::Body-->
+
+<!-- Mirrored from preview.keenthemes.com/metronic8/demo27/authentication/layouts/fancy/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Dec 2022 06:53:46 GMT -->
+</html>

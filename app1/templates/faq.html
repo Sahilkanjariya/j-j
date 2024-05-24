@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!--breadcrumb section start-->
+    <div class="breadcrumb-section pt-40 pb-40" data-background="{% static 'images/shapes/breadcrumb-bg.jpg' %}">
+        <div class="container">
+            <p class="breadcrumb-text fw-light mb-0"><a href="/index/">Home</a> / <span class="primary-text-color">FAQ</span></p>
+        </div>
+    </div>
+    <!--breadcrumb section end-->
+
+    <!--faq section start-->
+    <section class="bg-white ptb-120">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-xl-8">
+                    <div class="faq-left">
+                        <h2 class="mb-50 text-font-family fw-normal">Frequently asked questions</h2>
+                        <div class="accordion faq-accordion" id="faq_accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <a href="#acc_1" class="collapsed" data-bs-toggle="collapse">How Should I Care My Jewelery?</a>
+                                </div>
+                                <div class="accordion-collapse collapse show" id="acc_1" data-bs-parent="#faq_accordion">
+                                    <div class="accordion-body px-0 pb-0">
+                                        <p class="mb-0 text-color fw-light">Cconvallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Vestibulum diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Donec rutrum congue leo eget malesuada.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <a href="#acc_3"  data-bs-toggle="collapse">What are your payment methods?</a>
+                                </div>
+                                <div class="accordion-collapse collapse" id="acc_3" data-bs-parent="#faq_accordion">
+                                    <div class="accordion-body px-0 pb-0">
+                                        <p class="mb-0 text-color fw-light">Cconvallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Vestibulum diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Donec rutrum congue leo eget malesuada.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <a href="#acc_4"  data-bs-toggle="collapse">What is your return & exchange policy?</a>
+                                </div>
+                                <div class="accordion-collapse collapse" id="acc_4" data-bs-parent="#faq_accordion">
+                                    <div class="accordion-body px-0 pb-0">
+                                        <p class="mb-0 text-color fw-light">Cconvallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Vestibulum diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Donec rutrum congue leo eget malesuada.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <a href="#acc_5"  data-bs-toggle="collapse">How long will it take for me to get my order?</a>
+                                </div>
+                                <div class="accordion-collapse collapse" id="acc_5" data-bs-parent="#faq_accordion">
+                                    <div class="accordion-body px-0 pb-0">
+                                        <p class="mb-0 text-color fw-light">Cconvallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Vestibulum diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Donec rutrum congue leo eget malesuada.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <a href="#acc_6"  data-bs-toggle="collapse">Can I personally pick up my order?</a>
+                                </div>
+                                <div class="accordion-collapse collapse" id="acc_6" data-bs-parent="#faq_accordion">
+                                    <div class="accordion-body px-0 pb-0">
+                                        <p class="mb-0 text-color fw-light">Cconvallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Vestibulum diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Donec rutrum congue leo eget malesuada.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <a href="#acc_7"  data-bs-toggle="collapse">I need to update my shipping address!</a>
+                                </div>
+                                <div class="accordion-collapse collapse" id="acc_7" data-bs-parent="#faq_accordion">
+                                    <div class="accordion-body px-0 pb-0">
+                                        <p class="mb-0 text-color fw-light">Cconvallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Vestibulum diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Donec rutrum congue leo eget malesuada.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <a href="#acc_2"  data-bs-toggle="collapse">Will I pay for any customs duties and taxes?</a>
+                                </div>
+                                <div class="accordion-collapse collapse" id="acc_2" data-bs-parent="#faq_accordion">
+                                    <div class="accordion-body px-0 pb-0">
+                                        <p class="mb-0 text-color fw-light">Cconvallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Vestibulum diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Donec rutrum congue leo eget malesuada.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <form action="#" class="faq-form">
+                        <input type="text" placeholder="Your Name" class="theme-input">
+                        <input type="text" placeholder="Your Name" class="theme-input">
+                        <textarea placeholder="Type Message" class="theme-input" rows="6"></textarea>
+                        <button type="submit" class="template-btn primary-btn w-100 text-uppercase fw-normal">Submit Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--faq section end-->
+
+    <!--newsletter section start-->
+    <section class="newsletter-section light-bg ptb-120 position-relative z-1">
+        <img src="{% static 'images/shapes/neaklace.png' %}" alt="neaklace" class="position-absolute end-0 top-0 z--1 d-none d-xxl-block">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="newsletter-box text-center">
+                        <span class="fs-sm fw-light secondary-text-color">GET OUR NEWSLETTER</span>
+                        <h2 class="fw-normal mt-4 mb-50">Get News & Update to Your Inbox</h2>
+                        <form class="newsletter-form d-flex align-items-center">
+                            <input type="email" placeholder=" Email address...">
+                            <button type="submit" class="template-btn primary-btn"><span>Subscribe</span></button>
+                        </form>
+                        <p class="mb-0 mt-32 fw-light">Will be used accordance with our <a href="#" class="text-decoration-underline primary-text-color hover-secondary">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--newsletter section end-->
+
+  {% endblock %}

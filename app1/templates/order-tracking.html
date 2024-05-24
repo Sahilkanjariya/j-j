@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!--breadcrumb section start-->
+    <div class="breadcrumb-section pt-40 pb-40" data-background="{% static 'images/shapes/breadcrumb-bg.jpg' %}">
+        <div class="container">
+<!--            <p class="breadcrumb-text fw-light mb-0"><a href="/index/">Home</a> / <span class="primary-text-color">Order Tracking</span></p>-->
+        </div>
+    </div>
+    <!--breadcrumb section end-->
+
+    <!--order tracking start-->
+    <div class="order-tracking ptb-120 bg-white">
+        <div class="container">
+            <form class="theme-form">
+                <label for="id_number">Enter Order Id</label>
+                <input type="text" placeholder="Find in your order confirmation mail" class="theme-input" id="id_number">
+
+                <label for="mail" class="mt-32">Enter Email Address</label>
+                <input type="email" placeholder="Email you used during checkout" class="theme-input" id="mail">
+                <button type="submit" class="template-btn primary-btn d-block w-100 text-uppercase fw-normal mt-40"><span>Track Order</span></button>
+            </form>
+            <div class="help-box mt-40 d-flex align-items-center justify-content-between gap-3 flex-wrap">
+                <p class="primary-text-color text-uppercase mb-0">Do you need help?</p>
+                <p class="text-uppercase mb-0">Call us <a href="tel:2564214569" class="primary-text-color">+2564 214569</a> or drop us a message at <a href="#" class="primary-text-color">info@uroan.com</a></p>
+            </div>
+        </div>
+    </div>
+    <!--order tracking end-->
+
+
+    <!--newsletter section start-->
+    <section class="newsletter-section light-bg ptb-120 position-relative z-1">
+        <img src="{% static 'images/shapes/neaklace.png' %}" alt="neaklace" class="position-absolute end-0 top-0 z--1 d-none d-xxl-block">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="newsletter-box text-center">
+                        <span class="fs-sm fw-light secondary-text-color">GET OUR NEWSLETTER</span>
+                        <h2 class="fw-normal mt-4 mb-50">Get News & Update to Your Inbox</h2>
+                        <form class="newsletter-form d-flex align-items-center">
+                            <input type="email" placeholder=" Email address...">
+                            <button type="submit" class="template-btn primary-btn"><span>Subscribe</span></button>
+                        </form>
+                        <p class="mb-0 mt-32 fw-light">Will be used accordance with our <a href="#" class="text-decoration-underline primary-text-color hover-secondary">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--newsletter section end-->
+
+   {% endblock %}

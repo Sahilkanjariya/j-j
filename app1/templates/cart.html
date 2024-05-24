@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+     .mmtb{
+    padding: 50px 0px;
+    }
+</style>
+
+    <!--breadcrumb section start-->
+    <div class="breadcrumb-section pt-40 pb-40" data-background="{% static 'images/shapes/breadcrumb-bg.jpg' %}">
+        <div class="container">
+
+
+<!--            <p class="breadcrumb-text fw-light mb-0"><a href="/index/">Home</a> / <span class="primary-text-color">Cart</span></p>-->
+        </div>
+    </div>
+    <!--breadcrumb section end-->
+
+    <!---cart table start-->
+    <div class="ptb-120 mmtb bg-white">
+        <div class="container">
+
+            <div class="cart-table-wrapper table-responsive">
+                {% if c1 == 0 %}
+                {% for msg in messages %}
+                <div class="alert alert-danger" role="alert">
+
+                 {{msg}}
+                </div>
+                <div>
+                    <a href="/shop/" class="template-btn primary-btn text-uppercase mt-5"><span>countinue shopping</span></a>
+                </div>
+                {% endfor %}
+
+                {% else %}
+                {% for msg in messages %}
+                <div class="alert alert-danger" role="alert">
+                 {{msg}}
+                </div>
+                {% endfor %}
+                <table class="cart-table table">
+                    <tr>
+                        <th class="text-center">Products</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th class="text-end">Subtotal</th>
+                    </tr>
+                    {% for i in cart %}
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-4 product-box">
+                                <button type="button" class="remove_product"></button>
+                                <div class="feature-image light-bg">
+                                    <img src="{{ i.pro.image1.url }}" class="img-fluid" alt="product">
+                                </div>
+                                <div>
+                                    <span class="fs-sm text-uppercase secondary-text-color d-block">{{i.pro.cid.name}}</span>
+                                    <a href="#" class="product-title h6 mt-2 d-block"></a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            {% if i.pro.discount_percentage %}
+                            <span class="fw-medium primary-text-color">₹{{i.pro.discounted_price}}</span>
+                            {% else %}
+                            <span class="fw-medium primary-text-color">₹{{i.pro.price}}</span>
+
+                            {% endif %}
+
+                        </td>
+                        <td>
+                            <form action="/change_qty/{{i.id}}/" method="post">
+										{% csrf_token %}
+
+                            <div class="quantity d-flex align-items-center">
+                                <input type="number"  name="quantity" value="{{i.quantity}}" min="0" onchange="this.form.submit();" style="max-width: 75px;">
+<!--                                <input type="text" value="1">-->
+<!--                                <div class="step-btns">-->
+<!--                                    <button class="increment"><span class="fs-5 mt-2">+</span></button>-->
+<!--                                    <button class="decrement"><i class="bi bi-dash fs-5"></i></button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            </div>
+                            </form>
+                        </td>
+                        <td>
+                            <span class="primary-text-color fw-medium d-block text-end">₹{{i.total}}</span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+<!--                    <tr>-->
+<!--                        <td>-->
+<!--                            <div class="d-flex align-items-center gap-4 product-box">-->
+<!--                                <button type="button" class="remove_product"></button>-->
+<!--                                <div class="feature-image light-bg">-->
+<!--                                    <img src="{% static 'images/products/product-2.png' %}" class="img-fluid" alt="product">-->
+<!--                                </div>-->
+<!--                                <div>-->
+<!--                                    <span class="fs-sm text-uppercase secondary-text-color d-block">Bracelates</span>-->
+<!--                                    <a href="#" class="product-title h6 mt-2 d-block">Hkd 24k Bracelet</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                            <span class="fw-medium primary-text-color">₹100.00</span>-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                            <div class="quantity d-flex align-items-center">-->
+<!--                                <input type="text" value="1">-->
+<!--                                <div class="step-btns">-->
+<!--                                    <button class="increment"><span class="fs-5 mt-2">+</span></button>-->
+<!--                                    <button class="decrement"><i class="bi bi-dash fs-5"></i></button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                            <span class="primary-text-color fw-medium d-block text-end">₹100</span>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+                    <tr>
+                        <td colspan="4">
+                            <div class="d-flex align-items-center justify-content-between gap-4 flex-wrap">
+                                <form class="cart-coupon-form d-flex align-items-center">
+                                    <input type="text" placeholder="Coupon Code" class="theme-input">
+                                    <button type="submit" class="submit-btn">Apply Coupon</button>
+                                </form>
+                                <button type="button" class="template-btn primary-btn"><span>Update Cart</span></button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!--cart table end-->
+
+    <!--cart calculator-->
+  {% if subtotal  != 0 %}
+    <section class="pb-120 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="cart-calculator">
+                        <h3 class="mb-40">Cart Totals</h3>
+                        <form class="cart-calculator-form table-responsive" action="/checkout/">
+                            <table class="table">
+                                <tr>
+                                    <td>Subtotal</td>
+                                    <td>₹{{subtotal}}.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Shipping</td>
+                                       <td>₹{{shipping}}.00</td>
+<!--                                    <td>-->
+<!--                                        <div class="shipping-method">-->
+<!--                                            <label>-->
+<!--                                                <input type="radio" name="shipping">-->
+<!--                                                <span>Free Shipping</span>-->
+<!--                                            </label>-->
+<!--                                            <label>-->
+<!--                                                <input type="radio" name="shipping">-->
+<!--                                                <span>Flat Rate</span>-->
+<!--                                            </label>-->
+<!--                                            <label>-->
+<!--                                                <input type="radio" name="shipping">-->
+<!--                                                <span>Local Pickup</span>-->
+<!--                                            </label>-->
+<!--                                            <p class="my-4 fs-sm fw-light">Shipping options will be updated during checkout</p>-->
+<!--                                            <a href="#" class="primary-text-color">Calculate Shipping</a>-->
+<!--                                        </div>-->
+<!--                                    </td>-->
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>₹{{total}}.00</td>
+                                </tr>
+                            </table>
+                            <a href="/checkout/" class="template-btn primary-btn text-uppercase mt-5"><span>Proceed to checkout</span></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   {% endif %}
+    <!--cart calculator-->
+
+
+
+    <!--newsletter section start-->
+    <section class="newsletter-section light-bg ptb-120 mmtb position-relative z-1">
+        <img src="{% static 'images/shapes/neaklace.png' %}" alt="neaklace" class="position-absolute end-0 top-0 z--1 d-none d-xxl-block">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="newsletter-box text-center">
+                        <span class="fs-sm fw-light secondary-text-color">GET OUR NEWSLETTER</span>
+                        <h2 class="fw-normal mt-4 mb-50">Get News & Update to Your Inbox</h2>
+                        <form class="newsletter-form d-flex align-items-center">
+                            <input type="email" placeholder=" Email address...">
+                            <button type="submit" class="template-btn primary-btn"><span>Subscribe</span></button>
+                        </form>
+                        <p class="mb-0 mt-32 fw-light">Will be used accordance with our <a href="#" class="text-decoration-underline primary-text-color hover-secondary">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--newsletter section end-->
+
+   {% endblock %}

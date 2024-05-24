@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!--breadcrumb section start-->
+    <div class="breadcrumb-section pt-40 pb-40" data-background="{% static 'images/shapes/breadcrumb-bg.jpg' %}">
+        <div class="container">
+
+
+<!--            <p class="breadcrumb-text fw-light mb-0"><a href="/index/">Home</a> / <span class="primary-text-color">Cart</span></p>-->
+        </div>
+    </div>
+    <!--breadcrumb section end-->
+
+    <!---cart table start-->
+    <div class="ptb-120 bg-white">
+        <div class="container">
+
+            <div class="cart-table-wrapper table-responsive">
+
+                {% for i in o %}
+
+
+                <table class="cart-table table">
+                    <tr>
+                        <th class="text-center">Products</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Status</th>
+                        <th>Subtotal</th>
+                        <th>Delete Order </th>
+                    </tr>
+
+                    <p>order ID :{{i.id}}</p>
+                    <p>order Date :{{i.date}}</p>
+                     {% for v in o1 %}
+                    {% if v.order.id == i.id %}
+
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-4 product-box">
+                                <button type="button" class="remove_product"></button>
+                                <div class="feature-image light-bg">
+                                    <img src="{{ v.prod_id.image.url }}" class="img-fluid" alt="product">
+                                </div>
+                                <div>
+                                    <span class="fs-sm text-uppercase secondary-text-color d-block">{{v.prod_id.name}}</span>
+                                    <a href="#" class="product-title h6 mt-2 d-block"></a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+
+                            <span class="fw-medium primary-text-color">₹{{v.price}}</span>
+
+
+                        </td>
+                        <td>
+                               <span class="fw-medium primary-text-color">{{v.quantity}}</span>
+                        </td>
+                        <td>
+
+                            <span class="fw-medium primary-text-color">{{v.order.status}}</span>
+
+
+                        </td>
+                        <td>
+                            <span class="primary-text-color fw-medium d-block text-end">₹{{v.total_price}}</span>
+                        </td>
+                        <td><a href="/orderdelete/{{i.id}}/">Delete Order</a></td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                    <tr>
+                        <td colspan="4">
+                            <div class="d-flex align-items-center justify-content-between gap-4 flex-wrap">
+                                <form class="cart-coupon-form d-flex align-items-center">
+<!--                                    <input type="text" placeholder="Coupon Code" class="theme-input">-->
+<!--                                    <button type="submit" class="submit-btn">Apply Coupon</button>-->
+                                </form>
+                                <h4 class="primary-text-color fw-medium d-block text-end">Total : ₹{{i.total_price}}</h4>
+<!--                                <button type="button" class="template-btn primary-btn"><span>Update Cart</span></button>-->
+                            </div>
+                        </td>
+                    </tr>
+
+
+
+
+                </table>
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!--cart table end-->
+
+
+    <!--cart calculator-->
+
+
+
+    <!--newsletter section start-->
+    <section class="newsletter-section light-bg ptb-120 position-relative z-1">
+        <img src="{% static 'images/shapes/neaklace.png' %}" alt="neaklace" class="position-absolute end-0 top-0 z--1 d-none d-xxl-block">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="newsletter-box text-center">
+                        <span class="fs-sm fw-light secondary-text-color">GET OUR NEWSLETTER</span>
+                        <h2 class="fw-normal mt-4 mb-50">Get News & Update to Your Inbox</h2>
+                        <form class="newsletter-form d-flex align-items-center">
+                            <input type="email" placeholder=" Email address...">
+                            <button type="submit" class="template-btn primary-btn"><span>Subscribe</span></button>
+                        </form>
+                        <p class="mb-0 mt-32 fw-light">Will be used accordance with our <a href="#" class="text-decoration-underline primary-text-color hover-secondary">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--newsletter section end-->
+
+   {% endblock %}

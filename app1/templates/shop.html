@@ -1,0 +1,234 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .out-of-stock-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity as needed */
+        }
+    .discounted {
+            text-decoration: line-through;
+        }
+
+    .mmtb{
+    padding: 50px 0px;
+    }
+
+    .pmtb{padding: 25px 0px;}
+
+</style>
+
+    <!--breadcrumb section start-->
+    <div class="breadcrumb-section pt-40 pb-40" data-background="{% static 'images/shapes/breadcrumb-bg.jpg' %}">
+        <div class="container">
+            <p class="breadcrumb-text fw-light mb-0"><a href="index.html">Home</a>/<span class="primary-text-color">Shop Grid Layout</span></p>
+        </div>
+    </div>
+    <!--breadcrumb section end-->
+
+    <!--shop section start-->
+    <section class="shop-section bg-white ptb-120 mmtb">
+        <div class="container">
+
+                {% for msg in messages %}
+                <div class="alert alert-danger" role="alert">
+
+                 {{msg}}
+                </div>
+                <div>
+
+                </div>
+                {% endfor %}
+
+            <div class="row g-4">
+                <div class="col-xl-4 order-2 order-xl-1">
+                    <div class="shop-sidebar pe-xl-5 mt-5 mt-xl-0">
+                        <div class="sidebar-widget search-widget">
+<!--                            <form>-->
+<!--                                <input type="text" placeholder="Search Here..." class="theme-input fw-light">-->
+<!--                            </form>-->
+                        </div>
+<!--                        <div class="sidebar-widget categories-widget mt-60">-->
+<!--                            <h4 class="widget-title position-relative fw-normal mb-5">Categories</h4>-->
+<!--                            <ul class="sidebar-check-fields">-->
+<!--                                {% for c in cat %}-->
+<!--                                <li><label><input type="checkbox"> <span>{{c.name}}</span></label></li>-->
+<!--                                {% endfor %}-->
+<!--                                <li><label><input type="checkbox"> <span>Bracelets</span></label></li>-->
+<!--                                <li><label><input type="checkbox"> <span>Pendants</span></label></li>-->
+<!--                                <li><label><input type="checkbox"> <span>Earrings</span></label></li>-->
+<!--                                <li><label><input type="checkbox"> <span>Gift Card</span></label></li>-->
+<!--                                <li><label><input type="checkbox"> <span>Neaklaces</span></label></li>-->
+<!--                                <li><label><input type="checkbox"> <span>Personalized</span></label></li>-->
+<!--                                <li><label><input type="checkbox"> <span>Rings</span></label></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="sidebar-widget filter-widget mt-60">-->
+<!--                            <h4 class="widget-title position-relative mb-5">Filter by price</h4>-->
+<!--                            <div class="ur-pricing-range"></div>-->
+<!--                            -->
+<!--                            <form action="#" class="d-flex align-items-center justify-content-between mt-4">-->
+<!--                                <p class="mb-0">-->
+<!--                                    <label for="amount">Price:</label>-->
+<!--                                    <input type="text" id="amount" readonly>-->
+<!--                                </p>-->
+<!--                                <button type="submit" class="submit-btn">Filter<span class="ms-2"><i class="fas fa-arrow-right"></i></span></button>-->
+<!--                            </form>-->
+<!--                        </div>-->
+<!--                        <div class="sidebar-widget color-select-widget mt-60">-->
+<!--                            <h4 class="widget-title position-relative mb-5">Select Color</h4>-->
+<!--                            <ul class="color-select">-->
+<!--                                <li><label><input type="checkbox"><span class="bg-soft-gold">Soft Gold <span>(12)</span></span></label></li>-->
+<!--                                <li><label><input type="checkbox"><span class="bg-light-pink">Light Pink <span>(05)</span></span></label></li>-->
+<!--                                <li><label><input type="checkbox"><span class="bg-green-touch">Green Touch <span>(02)</span></span></label></li>-->
+<!--                                <li><label><input type="checkbox"><span class="bg-navy-blue">Navy Blue <span>(05)</span></span></label></li>-->
+<!--                                <li><label><input type="checkbox"><span class="bg-gray-white">Gray White <span>(16)</span></span></label></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="sidebar-widget brand-widget mt-60">-->
+<!--                            <h4 class="widget-title position-relative fw-normal mb-5">Brands</h4>-->
+<!--                            <ul class="sidebar-check-fields">-->
+<!--                                <li><label><input type="checkbox"> <span>Juliate <span>(09)</span></span></label></li>-->
+<!--                                <li><label><input type="checkbox"> <span>H&M <span>(50)</span></span></label></li>-->
+<!--                                <li><label><input type="checkbox"> <span>Macro <span>(08)</span></span></label></li>-->
+<!--                                <li><label><input type="checkbox"> <span>Harmoni <span>(13)</span></span></label></li>-->
+<!--                                <li><label><input type="checkbox"> <span>Sowat <span>(03)</span></span></label></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="sidebar-widget products-widget mt-60">-->
+<!--                            <h4 class="widget-title position-relative mb-5">Latest products</h4>-->
+<!--                            <ul class="sidebar-products">-->
+<!--                                <li class="d-flex align-items-center gap-4">-->
+<!--                                    <div class="flex-shrink-0 thumbnail light-bg p-2">-->
+<!--                                        <a href="product-details.html"><img src="{% static 'images/products/product-1.png' %}" alt="thumbnail" class="img-fluid"></a>-->
+<!--                                    </div>-->
+<!--                                    <div>-->
+<!--                                        <a href="product-details.html"><h6 class="mb-3">Pure Shine Gold</h6></a>-->
+<!--                                        <span class="price primary-text-color">₹165.00</span>-->
+<!--                                    </div>-->
+<!--                                </li>-->
+<!--                                <li class="d-flex align-items-center gap-4">-->
+<!--                                    <div class="flex-shrink-0 thumbnail light-bg p-2">-->
+<!--                                        <a href="product-details.html"><img src="{% static 'images/products/product-2.png' %}" alt="thumbnail" class="img-fluid"></a>-->
+<!--                                    </div>-->
+<!--                                    <div>-->
+<!--                                        <a href="product-details.html"><h6 class="mb-3">Delight Hiy Ring</h6></a>-->
+<!--                                        <span class="price primary-text-color">₹150.00</span>-->
+<!--                                    </div>-->
+<!--                                </li>-->
+<!--                                <li class="d-flex align-items-center gap-4">-->
+<!--                                    <div class="flex-shrink-0 thumbnail light-bg p-2">-->
+<!--                                        <a href="product-details.html"><img src="{% static 'images/products/product-3.png' %}" alt="thumbnail" class="img-fluid"></a>-->
+<!--                                    </div>-->
+<!--                                    <div>-->
+<!--                                        <a href="product-details.html"><h6 class="mb-3">White Ball Gold</h6></a>-->
+<!--                                        <span class="price primary-text-color">₹125.00</span>-->
+<!--                                    </div>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+                <div class="col-xl-12 order-1 order-xl-2">
+                    <div class="shop-grid">
+                        <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+<!--                            <div class="d-flex align-items-center gap-4">-->
+<!--                                <div class="select-wrapper">-->
+<!--                                    <select class="nice_select">-->
+<!--                                        <option>Default Sorting</option>-->
+<!--                                        <option>Sort by Price</option>-->
+<!--                                        <option>Sort by Popularity</option>-->
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                                <div class="layout-grid d-flex align-items-center">-->
+<!--                                    <a href="shop.html" class="active">-->
+<!--                                        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                                            <rect x="10.7139" width="9" height="3" fill="#121111"/>-->
+<!--                                            <rect x="10.7139" y="7" width="9" height="3" fill="#121111"/>-->
+<!--                                            <rect x="10.7139" y="14" width="9" height="3" fill="#121111"/>-->
+<!--                                            <rect width="9" height="3" fill="#121111"/>-->
+<!--                                            <rect y="7" width="9" height="3" fill="#121111"/>-->
+<!--                                            <rect y="14" width="9" height="3" fill="#121111"/>-->
+<!--                                        </svg>-->
+<!--                                    </a>-->
+<!--                                    <a href="shop-list.html">-->
+<!--                                        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                                            <rect x="5.71387" width="14.2857" height="3" fill="#121111"/>-->
+<!--                                            <rect x="5.71387" y="7" width="14.2857" height="3" fill="#121111"/>-->
+<!--                                            <rect x="5.71387" y="14" width="14.2857" height="3" fill="#121111"/>-->
+<!--                                            <rect width="3.80952" height="3" fill="#121111"/>-->
+<!--                                            <rect y="7" width="3.80952" height="3" fill="#121111"/>-->
+<!--                                            <rect y="14" width="3.80952" height="3" fill="#121111"/>-->
+<!--                                        </svg>-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                        </div>
+                        <div class="products-grid mt-n10">
+                            <div class="row">
+                                {% for i in p %}
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="ur-product-card pmtb mmtb position-relative card-sm-small">
+                                        {% if i.discount_percentage %}
+                                        <span class="position-absolute ur-badge coupon-badge">{{ i.discount_percentage }}%</span>
+                                        {% endif %}
+                                        <div class="feature-image d-flex align-items-cneter justify-content-center light-bg position-relative">
+                                            <a href="/product-details/"><img src="{{i.image1.url}}" alt="rings" class="img-fluid"></a>
+                                            {% if i.pieces == 0 %}
+                                                  <div class="out-of-stock-overlay"></div>
+                                             {% endif %}
+                                            <div class="product-overlay position-absolute">
+                                                <div class="product-btns d-flex align-items-center justify-content-between">
+                                                    <a href="/add_to_wishlist/{{i.id}}/"><i class="fa fa-heart-o"></i></a>
+
+                                                    <a href="/addtocart/{{i.id}}/"><i class="bi bi-basket"></i></a>
+                                                    <a href="/product-details/{{i.id}}/" data-bs-toggle="modal"><i class="bi bi-eye"></i></a>
+<!--                                                    <a href="/product-details/{{i.id}}/"><i class="bi bi-eye"></i></a>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-4">
+                                            <a href="shop-list.html" class="secondary-text-color text-uppercase">{{i.cid.name}}</a>
+                                            <a href="/product-details/{{i.id}}/"><h5 class="my-2 fw-medium product-title">{{i.name}}</h5></a>
+                                            <span {% if i.discount_percentage %} class="discounted" {% endif %} >₹{{i.price}}</span>
+                                            {% if i.discount_percentage %}
+                                            <span>₹{{ i.discounted_price }}</span>
+<!--                                                <p>Discount: {{ i.discount_percentage }}%</p>-->
+                                            {% endif %}
+
+
+
+
+                                            {% if i.pieces == 0 %}
+                                             <p class="primary-text-color fs-sm fw-medium" style="color:red;">Out of stock</p>
+
+                                             {% endif %}
+
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+<!--                        <div class="text-center mt-60">-->
+<!--                            <ul class="template-pagination d-inline-flex align-items-center gap-3">-->
+<!--                                <li><a href="#" class="active">01</a></li>-->
+<!--                                <li><a href="#">02</a></li>-->
+<!--                                <li><a href="#">03</a></li>-->
+<!--                                <li><a href="#">04</a></li>-->
+<!--                                <li><a href="#"><i class="fa-solid fa-angles-right"></i></a></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--shop section end-->
+
+
+
+  {% endblock %}
